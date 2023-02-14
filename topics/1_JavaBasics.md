@@ -1,4 +1,5 @@
 # Java Basics
+### [Reference](https://github.com/Tenphun0503/Practices_Java/blob/main/src/topicReference)
 
 ---
 ### *Variables and data types, control structures, methods and functions, arrays and collections*
@@ -16,7 +17,7 @@
  */
 ```
 
-### Variables
+### Variables and data types
 1. String
 2. int (byte, short, long)
 3. float (double)
@@ -35,6 +36,13 @@
 1. final: use if you don't want to overwrite existing values.
 - `final int myNum = 15;`
 
+### Control structures
+1. If...Else
+2. Switch
+3. While Loop
+4. For Loop
+5. Break/Continue
+
 ### Short Hand If...Else
 - `variable = (condition) ? expressionTrue : expressionFalse`
 
@@ -44,3 +52,8 @@
 - `type[][] variableName = {{},{},...}`
 2. For-Each Loop
 - `for (type variableName : arrayName)`
+
+### Method
+A method is a block of code which only runs when it is called.
+1. `static` means that the method belongs to the class and not an object of the class.
+2. Overloading
