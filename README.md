@@ -15,11 +15,11 @@
         <td>Install JDK and an IDE, try "Hello, World!"</td>
     </tr>
     <tr>
-        <td><a href="github.com/Tenphun0503/Practices-Java/topics/1_JavaBasics.md">Java Basics</a></td>
+        <td><a href="https://github.com/Tenphun0503/Practices_Java/blob/main/topics/1_JavaBasics.md">Java Basics</a></td>
         <td>Variables and data types, control structures, methods and functions, arrays and collections</td>
     </tr>
     <tr>
-        <td><a href="github.com/Tenphun0503/Practices-Java/topics/2_ObjectOrientedProgramming.md">Object-Oriented Programming</a></td>
+        <td><a href="https://github.com/Tenphun0503/Practices_Java/blob/main/topics/2_ObjectOrientedProgramming.md">Object-Oriented Programming</a></td>
         <td>Classes and objects, inheritance, polymorphism, encapsulation, abstraction</td>
     </tr>
     <tr>
