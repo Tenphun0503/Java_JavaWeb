@@ -4,47 +4,52 @@
 ### *This repository contains my works and practices in Java Language*
 
 ---
+### Outline
+<table>
+    <tr>
+        <th>Topic</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Getting start</td>
+        <td>Install JDK and an IDE, try "Hello, World!"</td>
+    </tr>
+    <tr>
+        <td><a href="github.com/Tenphun0503/Practices-Java/topics/1_JavaBasics.md">Java Basics</a></td>
+        <td>Variables and data types, control structures, methods and functions, arrays and collections</td>
+    </tr>
+    <tr>
+        <td><a href="github.com/Tenphun0503/Practices-Java/topics/2_ObjectOrientedProgramming.md">Object-Oriented Programming</a></td>
+        <td>Classes and objects, inheritance, polymorphism, encapsulation, abstraction</td>
+    </tr>
+    <tr>
+        <td>Exception Handling</td>
+        <td>Handling exceptions, try-catch-finally blocks</td>
+    </tr>
+    <tr>
+        <td>Input and Output</td>
+        <td>Reading and writing files, working with streams</td>
+    </tr>
+    <tr>
+        <td>Multithreading and Concurrency</td>
+        <td>Creating and managing threads, synchronization and locks</td>
+    </tr>
+    <tr>
+        <td>Java Core Libraries</td>
+        <td>java.lang package (String, Math, System, Object), 
+            java.util package (Collection, List, Map, Set), 
+            java.io package (File, InputStream, OutputStream),
+            java.net package (URL, HttpURLConnection), 
+            java.time package (LocalDate, LocalDateTime, Instant)
+        </td>
+    </tr>
+    <tr>
+        <td>Tools and Frameworks</td>
+        <td>Build tools like Maven or Gradle, unit testing frameworks like JUnit or TestNG, web frameworks like Spring or Struts</td>
+    </tr>
+</table>
 
-### Class of Java
-1. Must start with an uppercase letter
 
-### Comment in Java
-1. Single-line `//`
-2. Multi-line `/* */`
-3. Document
-```
-/**
- *  Document comment
- *  Development document description
- */
-```
 
-### Variables
-1. String
-2. int (byte, short, long)
-3. float (double)
-- `float myNum = 5.75f;`
-- `double myNum = 19.99d;`
-4. char
-5. boolean
 
-### Casting
-1. Widening Casting: small to large
-- `double myDouble = myInt;`
-2. Narrowing Casting: large to small
--  `int myInt = (int) myDouble;`
-
-### Keywords
-1. final: use if you don't want to overwrite existing values.
-- `final int myNum = 15;`
-
-### Short Hand If...Else
-- `variable = (condition) ? expressionTrue : expressionFalse`
-
-### Array
-1. Declare
-- `type[] variableName = { }`
-- `type[][] variableName = {{},{},...}`
-2. For-Each Loop
-- `for (type variableName : arrayName)`
 

@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Practices-Java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="A new repositories to learn Java">
+      <change afterPath="$PROJECT_DIR$/topics/1_JavaBasics.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/topics/2_ObjectOrientedProgramming.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +59,19 @@
       <option name="presentableId" value="Default" />
       <updated>1674165661622</updated>
     </task>
+    <task id="LOCAL-00001" summary="A new repositories to learn Java">
+      <created>1676355332820</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676355332820</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="A new repositories to learn Java" />
+    <option name="LAST_COMMIT_MESSAGE" value="A new repositories to learn Java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
