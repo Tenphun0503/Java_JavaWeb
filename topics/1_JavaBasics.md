@@ -1,5 +1,5 @@
 # Java Basics
-### [Reference](https://github.com/Tenphun0503/Practices_Java/blob/main/src/topicReference)
+### [Reference](https://github.com/Tenphun0503/Practices_Java/blob/main/src/TopicReference.java)
 
 ---
 ### *Variables and data types, control structures, methods and functions, arrays and collections*
