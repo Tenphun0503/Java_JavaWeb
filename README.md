@@ -53,7 +53,7 @@
 ---
 <div id="exceptions">
 
-### Exceptions
+### [Exceptions](https://www.w3schools.com/java/java_try_catch.asp)
 #### try, catch, finally
 ```
 try{
