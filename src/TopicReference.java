@@ -11,6 +11,7 @@ public class TopicReference {
     int sumOfNum(int x, int y){return x + y;}
     float sumOfNum(float x, float y){return x + y;}
 
+    // A public method
     public void myPrint(){
         System.out.println("Object called me");
     }
