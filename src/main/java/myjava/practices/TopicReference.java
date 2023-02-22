@@ -1,3 +1,5 @@
+package myjava.practices;
+
 /**
  * This class shows the basic of Java
  * Author: Tenphun
