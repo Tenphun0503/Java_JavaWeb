@@ -78,6 +78,7 @@ To use other types, you must specify an equivalent [**wrapper class**](https://w
 - `size()`
 - `keySet() //All the keys`
 - `values() //All the values`
+- `containsKey(key)`
 
 ### HashSet
 A collection of items where every item is unique.
