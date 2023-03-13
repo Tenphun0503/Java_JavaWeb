@@ -36,13 +36,8 @@
         <td>Creating and managing threads, synchronization and locks</td>
     </tr>
     <tr>
-        <td>Java Core Libraries</td>
-        <td>java.lang package (String, Math, System, Object), 
-            java.util package (Collection, List, Map, Set), 
-            java.io package (File, InputStream, OutputStream),
-            java.net package (URL, HttpURLConnection), 
-            java.time package (LocalDate, LocalDateTime, Instant)
-        </td>
+        <td>Java Web</td>
+        <td>Quick look of database, the front end. Web-related knowledge</td>
     </tr>
     <tr>
         <td><a href="https://github.com/Tenphun0503/Practices_Java/blob/main/topics/4.0_ToolsAndFrameworks.md">Tools and Frameworks</a></td>
