@@ -36,7 +36,7 @@
         <td>Creating and managing threads, synchronization and locks</td>
     </tr>
     <tr>
-        <td>Java Web</td>
+        <td><a href="https://github.com/Tenphun0503/Practices_Java/blob/main/topics/5_JavaWeb.md">Java Web</a></td>
         <td>Quick look of database, the front end. Web-related knowledge</td>
     </tr>
     <tr>
