@@ -1,8 +1,11 @@
 # Java Web
 
 ---
+**Plugins**: `Maven Helper;` `Database Navigator;`
 ### 1. DataBase
+
 #### 1. MySQL
+
 - Data Type:
 
 | Numeric Data Type | Description                                                                                    |
@@ -48,23 +51,45 @@
 | FOREIGN KEY     | Ensures that a column or set of columns in one table corresponds to a primary key in another table. |
 | CHECK           | Ensures that a value in a column or set of columns meets a specific condition or set of conditions. |
 
-- Transaction(Start Transaction or Begin, Commit, Rollback) 
+- Transaction(Start Transaction or Begin, Commit, Rollback)
 
 #### 2. [JDBC](https://github.com/Tenphun0503/Practices_Java/blob/main/src/test/java/myjava/practices/jdbc/JDBCTest.java)
-- DriverManager; 
-- Connection; 
-- Statement; 
-- ResultSet; 
-- PreparedStatement (useServerPreStmts=true);  
+
+DriverManager; Connection; Statement; ResultSet; PreparedStatement (useServerPreStmts=true);
+
+###### Steps:
+
+1. Register Driver;
+2. Get Connection;
+3. Define SQL;
+4. Define PreparedStatement;
+5. Set SQL Params;
+6. Execute SQL;
+7. Process Result;
+8. Clean Resources;
 
 #### 3. MyBatis
+
+MyBatis is a Java-based persistence framework that allows developers to easily map SQL queries and stored procedures to
+Java objects.
+
 ### 2. Front End
+
 #### 1. HTML + CSS
+
 #### 2. JavaScript
+
 #### 3. Ajax + VUE + ElementUI
+
 ### 3. Web Core
+
 #### 1. Tomcat + HTTP + Servlet
+
 #### 2. Request + Response
+
 #### 3. JSP
+
 #### 4. Cookie + Session
+
 #### 5. Filter + Listener
+

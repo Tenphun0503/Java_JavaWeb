@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="add JavaWeb">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myjava/practices/jdbc/JDBCBrand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myjava/practices/jdbc/JDBCTest.java" afterDir="false" />
+    <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="Update JavaWeb">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myjava/practices/mybatis/demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/brandMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Practices-Java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Practices-Java.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -47,19 +50,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Files/Workspace/java-workspace/Practices-Java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.35888737&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "D:/Files/Workspace/java-workspace/Practices-Java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.35888737",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
+    "spring.configuration.checksum": "211ab8d04a28ba9601aa2b9d9e28a999",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Files\Workspace\java-workspace\Practices-Java\src\main\java" />
@@ -68,7 +85,7 @@
       <recent name="myjava.practices.jdbc" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JDBCTest.testSelectAll">
+  <component name="RunManager">
     <configuration name="JDBCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Practices-Java" />
       <extension name="coverage">
@@ -166,6 +183,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674165661622</updated>
+      <workItem from="1678768414724" duration="818000" />
+      <workItem from="1678769380551" duration="818000" />
     </task>
     <task id="LOCAL-00001" summary="A new repositories to learn Java">
       <created>1676355332820</created>
@@ -265,8 +284,32 @@
       <option name="project" value="LOCAL" />
       <updated>1678727338584</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update JavaWeb">
+      <created>1678758377339</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678758377339</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Update JavaWeb">
+      <created>1678758548137</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678758548137</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Update JavaWeb">
+      <created>1678758671459</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678758671459</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="A new repositories to learn Java" />
@@ -281,7 +324,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="add leetcode practice" />
     <MESSAGE value="add JavaWeb" />
-    <option name="LAST_COMMIT_MESSAGE" value="add JavaWeb" />
+    <MESSAGE value="Update JavaWeb" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update JavaWeb" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

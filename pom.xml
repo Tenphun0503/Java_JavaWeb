@@ -34,11 +34,20 @@
             <version>8.0.32</version>
         </dependency>
 
+        <!--Testing-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.13</version>
+        </dependency>
+
+
 
     </dependencies>
 
