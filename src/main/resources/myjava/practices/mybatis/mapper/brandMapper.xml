@@ -4,7 +4,32 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="myjava.practices.mybatis.mapper.brandMapper">
-    <select id="selectAll" resultType="myjava.practices.jdbc.JDBCBrand">
-        select * from tb_brand;
+
+    <!--SQL snippet: Can predefine and use multiple times-->
+    <sql id="brand_column">id, brand_name, company_name, ordered, description, status</sql>
+
+    <!--Use Result Map can define each variable separately-->
+    <!--
+        id: unique identifier
+        type: mapper type, the class you defined
+    -->
+    <resultMap id="brandResultMap" type="Brand">
+        <result column="brand_name" property="brandName" />
+        <result column="company_name" property="companyName" />
+    </resultMap>
+
+    <!--example of using sql snippet-->
+    <!--
+    <select id="selectAll" resultType="Brand">
+        select
+            <include refid="brand_column" />
+        from tb_brand;
+    </select>
+    -->
+
+    <!--example of using result map-->
+    <select id="selectAll" resultMap="brandResultMap">
+        select *
+        from tb_brand;
     </select>
 </mapper>

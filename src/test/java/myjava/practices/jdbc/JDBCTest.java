@@ -58,7 +58,7 @@ public class JDBCTest {
         // Execute sql
         ResultSet rs = pstmt.executeQuery();
 
-        List<JDBCBrand> brands = new ArrayList<>();
+        List<Brand> brands = new ArrayList<>();
         // Process result
         while (rs.next()){
             // get data
@@ -70,7 +70,7 @@ public class JDBCTest {
             int status = rs.getInt("status");
 
             // encapsulation
-            JDBCBrand brand = new JDBCBrand(id, brandName, companyName, ordered, description, status);
+            Brand brand = new Brand(id, brandName, companyName, ordered, description, status);
             brands.add(brand);
         }
         System.out.println(brands);

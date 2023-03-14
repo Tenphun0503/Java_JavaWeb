@@ -5,7 +5,7 @@
  */
 package myjava.practices.jdbc;
 
-public class JDBCBrand {
+public class Brand {
     private Integer id;
     private String brandName;
     private String companyName;
@@ -14,7 +14,7 @@ public class JDBCBrand {
     private Integer status;
 
     // Use alt+insert to generate constructor
-    public JDBCBrand(Integer id, String brandName, String companyName, Integer ordered, String description, Integer status) {
+    public Brand(Integer id, String brandName, String companyName, Integer ordered, String description, Integer status) {
         this.id = id;
         this.brandName = brandName;
         this.companyName = companyName;
@@ -25,7 +25,7 @@ public class JDBCBrand {
 
     @Override
     public String toString() {
-        return "JDBCBrand{" +
+        return "Brand{" +
                 "id=" + id +
                 ", brandName='" + brandName + '\'' +
                 ", companyName='" + companyName + '\'' +

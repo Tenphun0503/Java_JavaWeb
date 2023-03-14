@@ -28,7 +28,7 @@ public class demo {
         SqlSession session = sqlSessionFactory.openSession();
 
         // Execute SQL
-        List<Object> brands = session.selectList("test.selectAll");
+        List<Object> brands = session.selectList("myjava.practices.mybatis.mapper.brandMapper.selectAll");
 
         System.out.println(brands);
 

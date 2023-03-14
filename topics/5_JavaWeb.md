@@ -72,8 +72,15 @@ DriverManager; Connection; Statement; ResultSet; PreparedStatement (useServerPre
 
 MyBatis is a Java-based persistence framework that allows developers to easily map SQL queries and stored procedures to
 Java objects.
-- Configuration: configuration files have settings and properties such as database information, mappers, etc. ()
-- Mapper XML Files:
+- [Configuration](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/resources/mybatis-config.xml): 
+configuration files have settings and properties such as dataSource, mappers, etc. ()  
+`<typeAliases>:` Can Set Alias of a package, so that you can just write `resultType=Brand` in brandMapper.xml
+```
+<typeAliases>
+    <package name="myjava.practices.mybaits>
+</typeAliases>
+```
+- [Mapper XML Files](https://github.com/Tenphun0503/Practices_Java/tree/main/src/main/resources/myjava/practices/mybatis/mapper):
 
 ### 2. Front End
 

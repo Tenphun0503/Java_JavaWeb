@@ -3,6 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <typeAliases>
+        <package name="myjava.practices.mybatis"/>
+    </typeAliases>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -15,6 +19,7 @@
             </dataSource>
         </environment>
     </environments>
+
     <mappers>
         <!--load Mapper files-->
         <!--<mapper resource="myjava/practices/mybatis/mapper/brandMapper.xml"/>-->

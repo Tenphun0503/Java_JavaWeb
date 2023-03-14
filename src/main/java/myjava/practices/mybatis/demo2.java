@@ -1,7 +1,8 @@
-package myjava.practices.mybatis.mapper;
+package myjava.practices.mybatis;
 
 
-import myjava.practices.jdbc.JDBCBrand;
+import myjava.practices.jdbc.Brand;
+import myjava.practices.mybatis.mapper.brandMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -29,7 +30,7 @@ public class demo2 {
         // Get UserMapper interface object
         brandMapper brandMapper = session.getMapper(brandMapper.class);
         // Execute
-        List<JDBCBrand> brands = brandMapper.selectAll();
+        List<Brand> brands = brandMapper.selectAll();
 
 
         System.out.println(brands);
