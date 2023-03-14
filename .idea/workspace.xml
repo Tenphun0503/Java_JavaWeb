@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="Update JavaWeb">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myjava/practices/mybatis/demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/brandMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+    <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="Add MyBatis related;">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practices-Java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Practices-Java.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/5_JavaWeb.md" beforeDir="false" afterPath="$PROJECT_DIR$/topics/5_JavaWeb.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +58,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.35888737",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
+    "settings.editor.selected.configurable": "SQL Dialects",
     "spring.configuration.checksum": "211ab8d04a28ba9601aa2b9d9e28a999",
     "vue.rearranger.settings.migration": "true"
   },
@@ -184,7 +175,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674165661622</updated>
       <workItem from="1678768414724" duration="818000" />
-      <workItem from="1678769380551" duration="818000" />
+      <workItem from="1678769380551" duration="1288000" />
     </task>
     <task id="LOCAL-00001" summary="A new repositories to learn Java">
       <created>1676355332820</created>
@@ -305,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678758671459</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add MyBatis related;">
+      <created>1678770402914</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1678770402914</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +323,8 @@
     <MESSAGE value="add leetcode practice" />
     <MESSAGE value="add JavaWeb" />
     <MESSAGE value="Update JavaWeb" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update JavaWeb" />
+    <MESSAGE value="Add MyBatis related;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add MyBatis related;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
