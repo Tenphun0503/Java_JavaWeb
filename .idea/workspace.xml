@@ -68,7 +68,7 @@
       <recent name="myjava.practices.jdbc" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JDBCTest.testDelete">
+  <component name="RunManager" selected="JUnit.JDBCTest.testSelectAll">
     <configuration name="JDBCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Practices-Java" />
       <extension name="coverage">
@@ -150,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JDBCTest.testSelectAll" />
         <item itemvalue="JUnit.JDBCTest.testDelete" />
         <item itemvalue="JUnit.JDBCTest.testUpdate" />
         <item itemvalue="JUnit.JDBCTest.testInsert" />
         <item itemvalue="JUnit.JDBCTest" />
-        <item itemvalue="JUnit.JDBCTest.testSelectAll" />
       </list>
     </recent_temporary>
   </component>

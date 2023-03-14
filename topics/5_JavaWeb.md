@@ -50,53 +50,13 @@
 
 - Transaction(Start Transaction or Begin, Commit, Rollback) 
 
-#### 2. JDBC
-- DriverManager; Connection; Statement; ResultSet; PreparedStatement(useServerPreStmts=true);  
-- Sample Code
-```
-import java.sql.*;
+#### 2. [JDBC](https://github.com/Tenphun0503/Practices_Java/blob/main/src/test/java/myjava/practices/jdbc/JDBCTest.java)
+- DriverManager; 
+- Connection; 
+- Statement; 
+- ResultSet; 
+- PreparedStatement (useServerPreStmts=true);  
 
-public class JDBCPreparedStatementDemo {
-
-    public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/mydatabase"; // replace mydatabase with the name of your database
-        String user = "myuser"; // replace myuser with your MySQL username
-        String password = "mypassword"; // replace mypassword with your MySQL password
-
-        try {
-            // Register the JDBC driver
-            Class.forName("com.mysql.jdbc.Driver");
-
-            // Open a connection to the database
-            Connection conn = DriverManager.getConnection(url, user, password);
-
-            // Prepare a statement with parameters
-            String sql = "INSERT INTO mytable (name, age) VALUES (?, ?)";
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-
-            // Set the parameter values
-            pstmt.setString(1, "John Doe");
-            pstmt.setInt(2, 25);
-
-            // Execute the statement
-            int rows = pstmt.executeUpdate();
-
-            // Process the results
-            if (rows > 0) {
-                System.out.println("Data inserted successfully.");
-            } else {
-                System.out.println("Data not inserted.");
-            }
-
-            // Close the statement and connection
-            pstmt.close();
-            conn.close();
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
 #### 3. MyBatis
 ### 2. Front End
 #### 1. HTML + CSS
