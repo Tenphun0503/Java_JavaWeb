@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="test">
+<mapper namespace="myjava.practices.mybatis.mapper.brandMapper">
     <select id="selectAll" resultType="myjava.practices.jdbc.JDBCBrand">
         select * from tb_brand;
     </select>

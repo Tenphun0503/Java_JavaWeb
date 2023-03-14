@@ -72,6 +72,8 @@ DriverManager; Connection; Statement; ResultSet; PreparedStatement (useServerPre
 
 MyBatis is a Java-based persistence framework that allows developers to easily map SQL queries and stored procedures to
 Java objects.
+- Configuration: configuration files have settings and properties such as database information, mappers, etc. ()
+- Mapper XML Files:
 
 ### 2. Front End
 
