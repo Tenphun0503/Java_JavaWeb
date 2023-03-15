@@ -1,12 +1,13 @@
 package myjava.practices.mybatis;
 
 
-import myjava.practices.jdbc.Brand;
+
 import myjava.practices.mybatis.mapper.brandMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import myjava.practices.mybatis.Brand;
 
 import java.io.InputStream;
 import java.util.List;

@@ -68,20 +68,25 @@ DriverManager; Connection; Statement; ResultSet; PreparedStatement (useServerPre
 7. Process Result;
 8. Clean Resources;
 
-#### 3. MyBatis
+#### 3. [MyBatis](https://github.com/Tenphun0503/Practices_Java/blob/main/src/test/java/myjava/practices/mybatis/MyBatisTest.java)
 
 MyBatis is a Java-based persistence framework that allows developers to easily map SQL queries and stored procedures to
 Java objects.
 - [Configuration](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/resources/mybatis-config.xml): 
-configuration files have settings and properties such as dataSource, mappers, etc. ()  
-`<typeAliases>:` Can Set Alias of a package, so that you can just write `resultType=Brand` in brandMapper.xml
+configuration files have settings and properties such as dataSource, mappers, etc.
+`<typeAliases>:` Can Set Alias of a package, so that you can just write `resultType=Brand` in brandMapper.xml  
+- [Mapper XML Files](https://github.com/Tenphun0503/Practices_Java/tree/main/src/main/resources/myjava/practices/mybatis/mapper):  
+  `#{} or ${}` are [placeholder](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/resources/myjava/practices/mybatis/mapper/brandMapper.xml): `#{}` like preparedStatement, prevent sql injection.  
+  For `<`, since it is part of a label, it can't be written directly but use escape character or CDATA  
+  **\&lt;** or  `<![CDATA[ < ]]>`
+- [Multiple parameters](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/java/myjava/practices/mybatis/mapper/brandMapper.java): 1. Annotation; 2 Object; 3 Map
+- [Dynamically Conditional Querying](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/resources/mybatis-config.xml) (`if, choose(when, otherwise), trim(where, set), foreach`)
+- Insert: if return id is needed, set `useGeneratedKeys="true" keyProperty="id"` in <insert>
+- Annotation: We used mapper.xml+mapper.java before, but we can also use annotation and use .java only
 ```
-<typeAliases>
-    <package name="myjava.practices.mybaits>
-</typeAliases>
+@Select("select * from tb where id=#{id}")
+public Line selectyById(int id);
 ```
-- [Mapper XML Files](https://github.com/Tenphun0503/Practices_Java/tree/main/src/main/resources/myjava/practices/mybatis/mapper):
-
 ### 2. Front End
 
 #### 1. HTML + CSS
