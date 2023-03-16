@@ -80,27 +80,25 @@ configuration files have settings and properties such as dataSource, mappers, et
   For `<`, since it is part of a label, it can't be written directly but use escape character or CDATA  
   **\&lt;** or  `<![CDATA[ < ]]>`
 - [Multiple parameters](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/java/myjava/practices/mybatis/mapper/brandMapper.java): 1. Annotation; 2 Object; 3 Map
-- [Dynamically Conditional Querying](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/resources/mybatis-config.xml) (`if, choose(when, otherwise), trim(where, set), foreach`)
+- [Dynamically Conditional Querying](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/resources/myjava/practices/mybatis/mapper/brandMapper.xml) (`if, choose(when, otherwise), trim(where, set), foreach`)
 - Insert: if return id is needed, set `useGeneratedKeys="true" keyProperty="id"` in <insert>
 - Annotation: We used mapper.xml+mapper.java before, but we can also use annotation and use .java only
 ```
 @Select("select * from tb where id=#{id}")
 public Line selectyById(int id);
 ```
-### 2. Front End
 
-#### 1. HTML + CSS
-
-#### 2. JavaScript
-
-#### 3. Ajax + VUE + ElementUI
-
-### 3. Web Core
-
-#### 1. Tomcat + HTTP + Servlet
+### 2. Web Core
+#### 1. HTTP + Tomcat + Servlet
+1. HTTP is the protocol that is used to transfer data over the web.  
+2. Tomcat is an open-source web server and servlet container developed by the Apache Software Foundation. 
+It is used to run Java web applications that are written in servlet and JSP (JavaServer Pages) technologies.  
+3. A servlet is a Java programming language class that is used to process HTTP requests and generate HTTP responses.
 
 #### 2. Request + Response
-
+1. Request
+  
+2. Response
 #### 3. JSP
 
 #### 4. Cookie + Session

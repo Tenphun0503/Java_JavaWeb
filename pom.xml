@@ -12,6 +12,7 @@
     <artifactId>practices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Practices-Java</name>
+    <packaging>war</packaging>
     <description>notes and practices of learning Java</description>
     <properties>
         <java.version>19</java.version>
