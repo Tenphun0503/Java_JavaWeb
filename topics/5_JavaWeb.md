@@ -96,9 +96,14 @@ It is used to run Java web applications that are written in servlet and JSP (Jav
 3. A servlet is a Java programming language class that is used to process HTTP requests and generate HTTP responses.
 
 #### 2. Request + Response
-1. Request
-  
-2. Response
+1. Request:Get request data.
+   1. Get/Post
+   2. Three parts
+      1. Request Line  
+        `String getMethod(), String getQueryString(), etc.`
+      2. Request Header
+      3. Request Body
+2. Response: Set Response data.
 #### 3. JSP
 
 #### 4. Cookie + Session
