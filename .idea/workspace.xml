@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="update myBatis">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Practices_Java_Web_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="update WebCore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practices-Java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Practices-Java.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/5_JavaWeb.md" beforeDir="false" afterPath="$PROJECT_DIR$/topics/5_JavaWeb.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +46,9 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Files/Workspace/java-workspace/Practices-Java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Files/Workspace/java-workspace/takeoutsys&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -192,7 +185,10 @@
       <workItem from="1678808580157" duration="8741000" />
       <workItem from="1678827869075" duration="15362000" />
       <workItem from="1678891666692" duration="6332000" />
-      <workItem from="1678936841623" duration="1816000" />
+      <workItem from="1678936841623" duration="2054000" />
+      <workItem from="1678986290024" duration="599000" />
+      <workItem from="1679018625673" duration="2704000" />
+      <workItem from="1679096556357" duration="1193000" />
     </task>
     <task id="LOCAL-00001" summary="A new repositories to learn Java">
       <created>1676355332820</created>
@@ -348,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678892162909</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update WebCore">
+      <created>1678939665945</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1678939665945</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +375,8 @@
     <MESSAGE value="Add MyBatis related;" />
     <MESSAGE value="update;" />
     <MESSAGE value="update myBatis" />
-    <option name="LAST_COMMIT_MESSAGE" value="update myBatis" />
+    <MESSAGE value="update WebCore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update WebCore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
