@@ -4,6 +4,8 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Server {
     public static void main(String[] arg) throws Exception {
@@ -58,7 +60,8 @@ class Handler extends Thread {
             writer.write("\r\n");
             writer.flush();
         } else {
-            BufferedReader br = new BufferedReader(new FileReader("/Users/tenphun0503/Desktop/IDEAProjects/Practices_Java/src/main/webapp/html/a.html"));
+            Path path = Paths.get("").toAbsolutePath();
+            BufferedReader br = new BufferedReader(new FileReader(path + "/src/main/webapp/html/a.html"));
             StringBuilder data = new StringBuilder();
             String line = null;
             while ((line = br.readLine()) != null) {
