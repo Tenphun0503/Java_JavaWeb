@@ -90,17 +90,34 @@ public Line selectyById(int id);
 
 ### 2. Web Core
 #### 1. HTTP + Tomcat + Servlet
-1. HTTP is the protocol that is used to transfer data over the web.  
+1. [HTTP](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/java/myjava/practices/http/Server.java) is the protocol that is used to transfer data over the web.  
 2. Tomcat is an open-source web server and servlet container developed by the Apache Software Foundation. 
 It is used to run Java web applications that are written in servlet and JSP (JavaServer Pages) technologies.  
 3. A servlet is a Java programming language class that is used to process HTTP requests and generate HTTP responses.
 
-#### 2. Request + Response
-1. Request
-  
-2. Response
-#### 3. JSP
+#### 2. [Request + Response](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/java/myjava/practices/tomcat/ServletDemo.java)
+1. Request:Get request data.
+   1. Get/Post
+   2. Three parts
+      1. Request Line  
+        `String getMethod(), String getQueryString(), etc.`
+      2. Request Header
+      3. Request Body
+   3. Request Forward: `req.getRequestDispatcher('src B').forward(req,resp);`
+      1. Set Attribute
+      2. Get Attribute
+      3. Remove Attribute
+2. Response: Set Response data.
+   1. Three parts:
+      1. Response Line: `setSatus(int sc)`
+      2. Response Header
+      3. Response Body
+   2. Response Redirect:
+      1. `setStatus(302)`
+      2. `setHeader("location", "src B")`
 
+#### 3. JSP
+JSP stands for JavaServer Pages. JSP is a technology that allows web developers to create dynamic, server-side web pages by embedding Java code directly into HTML pages.
 #### 4. Cookie + Session
 
 #### 5. Filter + Listener
