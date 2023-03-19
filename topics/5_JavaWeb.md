@@ -95,7 +95,7 @@ public Line selectyById(int id);
 It is used to run Java web applications that are written in servlet and JSP (JavaServer Pages) technologies.  
 3. A servlet is a Java programming language class that is used to process HTTP requests and generate HTTP responses.
 
-#### 2. Request + Response
+#### 2. [Request + Response](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/java/myjava/practices/tomcat/ServletDemo.java)
 1. Request:Get request data.
    1. Get/Post
    2. Three parts
@@ -115,8 +115,9 @@ It is used to run Java web applications that are written in servlet and JSP (Jav
    2. Response Redirect:
       1. `setStatus(302)`
       2. `setHeader("location", "src B")`
-#### 3. JSP
 
+#### 3. JSP
+JSP stands for JavaServer Pages. JSP is a technology that allows web developers to create dynamic, server-side web pages by embedding Java code directly into HTML pages.
 #### 4. Cookie + Session
 
 #### 5. Filter + Listener

@@ -9,11 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="Add a HTTP socket sample">
-      <change afterPath="$PROJECT_DIR$/src/main/java/myjava/practices/tomcat/ServletDemo.java" afterDir="false" />
+    <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="Add a Tomcat servlet demo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myjava/practices/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myjava/practices/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myjava/practices/http/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myjava/practices/http/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/topics/5_JavaWeb.md" beforeDir="false" afterPath="$PROJECT_DIR$/topics/5_JavaWeb.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -472,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679167634724</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Add a Tomcat servlet demo">
+      <created>1679174744139</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1679174744139</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +513,8 @@
     <MESSAGE value="update myBatis" />
     <MESSAGE value="update WebCore" />
     <MESSAGE value="Add a HTTP socket sample" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a HTTP socket sample" />
+    <MESSAGE value="Add a Tomcat servlet demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a Tomcat servlet demo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
