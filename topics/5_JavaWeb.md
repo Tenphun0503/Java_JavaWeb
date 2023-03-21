@@ -116,8 +116,16 @@ It is used to run Java web applications that are written in servlet and JSP (Jav
       1. `setStatus(302)`
       2. `setHeader("location", "src B")`
 
-#### 3. JSP
-JSP stands for JavaServer Pages. JSP is a technology that allows web developers to create dynamic, server-side web pages by embedding Java code directly into HTML pages.
+#### 3. MVC (Model-View-Controller) and  three-level architecture
+1. MVC:
+   1. The Model represents the application's data and logic.
+   2. The View represents the user interface.
+   3. the Controller acts as an intermediary between the two, handling user input and updating the Model and View as needed.
+2. Three-level architecture
+   1. The Presentation layer handles the user interface and user interaction. (`com.xxx.web`)
+   2. The Business layer contains the application's logic and rules. (`com.xxx.service`)
+   3. The Data Access layer manages data storage and retrieval.  (`com.xxx.dao`)
+
 #### 4. Cookie + Session
 
 #### 5. Filter + Listener
