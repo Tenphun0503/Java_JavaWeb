@@ -11,7 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="36a7914d-0e6a-4c2b-9bd4-cd74b08f541b" name="变更" comment="Add a Tomcat servlet demo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/5_JavaWeb.md" beforeDir="false" afterPath="$PROJECT_DIR$/topics/5_JavaWeb.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myjava/practices/SpringPractices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myjava/practices/leetcode/N3RepeatNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myjava/practices/leetcode/T167TwoSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myjava/practices/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myjava/practices/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myjava/practices/mybatis/mapper/brandMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myjava/practices/mybatis/mapper/brandMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics/4.1_Spring.md" beforeDir="false" afterPath="$PROJECT_DIR$/topics/4.1_Spring.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -148,9 +148,9 @@
     </delete>
 
     <!--
-        mybatis makes array parameter a Map
+        mybatis makes collection a Map with key 'array' and value the specific array, like ids in example
             * default: array
-            # Use @Param to change the name: void deleteByIds(@Param("ids") int[] ids); so collection below can be ids
+            * Use @Param to change the name: void deleteByIds(@Param("ids") int[] ids); so collection below can be ids
     -->
     <delete id="deleteByIds">
         delete from tb_brand
