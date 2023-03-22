@@ -4,10 +4,10 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Practices-Java" />
+          <element id="module-output" name="Java_JavaWeb" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="Practices-Java/web/Web" />
+      <element id="javaee-facet-resources" facet="Java_JavaWeb/web/Web" />
     </root>
   </artifact>
 </component>

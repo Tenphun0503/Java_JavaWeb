@@ -53,7 +53,7 @@
 
 - Transaction(Start Transaction or Begin, Commit, Rollback)
 
-#### 2. [JDBC](https://github.com/Tenphun0503/Practices_Java/blob/main/src/test/java/myjava/practices/jdbc/JDBCTest.java)
+#### 2. [JDBC](https://github.com/Tenphun0503/Java_JavaWeb/blob/main/src/test/java/myjava/practices/jdbc/JDBCTest.java)
 
 DriverManager; Connection; Statement; ResultSet; PreparedStatement (useServerPreStmts=true);
 
@@ -68,19 +68,19 @@ DriverManager; Connection; Statement; ResultSet; PreparedStatement (useServerPre
 7. Process Result;
 8. Clean Resources;
 
-#### 3. [MyBatis](https://github.com/Tenphun0503/Practices_Java/blob/main/src/test/java/myjava/practices/mybatis/MyBatisTest.java)
+#### 3. [MyBatis](https://github.com/Tenphun0503/Java_JavaWeb/blob/main/src/test/java/myjava/practices/mybatis/MyBatisTest.java)
 
 MyBatis is a Java-based persistence framework that allows developers to easily map SQL queries and stored procedures to
 Java objects.
-- [Configuration](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/resources/mybatis-config.xml): 
+- [Configuration](https://github.com/Tenphun0503/Java_JavaWeb/blob/main/src/main/resources/mybatis-config.xml): 
 configuration files have settings and properties such as dataSource, mappers, etc.
 `<typeAliases>:` Can Set Alias of a package, so that you can just write `resultType=Brand` in brandMapper.xml  
-- [Mapper XML Files](https://github.com/Tenphun0503/Practices_Java/tree/main/src/main/resources/myjava/practices/mybatis/mapper):  
-  `#{} or ${}` are [placeholder](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/resources/myjava/practices/mybatis/mapper/brandMapper.xml): `#{}` like preparedStatement, prevent sql injection.  
+- [Mapper XML Files](https://github.com/Tenphun0503/Java_JavaWeb/tree/main/src/main/resources/myjava/practices/mybatis/mapper):  
+  `#{} or ${}` are [placeholder](https://github.com/Tenphun0503/Java_JavaWeb/blob/main/src/main/resources/myjava/practices/mybatis/mapper/brandMapper.xml): `#{}` like preparedStatement, prevent sql injection.  
   For `<`, since it is part of a label, it can't be written directly but use escape character or CDATA  
   **\&lt;** or  `<![CDATA[ < ]]>`
-- [Multiple parameters](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/java/myjava/practices/mybatis/mapper/brandMapper.java): 1. Annotation; 2 Object; 3 Map
-- [Dynamically Conditional Querying](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/resources/myjava/practices/mybatis/mapper/brandMapper.xml) (`if, choose(when, otherwise), trim(where, set), foreach`)
+- [Multiple parameters](https://github.com/Tenphun0503/Java_JavaWeb/blob/main/src/main/java/myjava/practices/mybatis/mapper/brandMapper.java): 1. Annotation; 2 Object; 3 Map
+- [Dynamically Conditional Querying](https://github.com/Tenphun0503/Java_JavaWeb/blob/main/src/main/resources/myjava/practices/mybatis/mapper/brandMapper.xml) (`if, choose(when, otherwise), trim(where, set), foreach`)
 - Insert: if return id is needed, set `useGeneratedKeys="true" keyProperty="id"` in <insert>
 - Annotation: We used mapper.xml+mapper.java before, but we can also use annotation and use .java only
 ```
@@ -90,12 +90,12 @@ public Line selectyById(int id);
 
 ### 2. Web Core
 #### 1. HTTP + Tomcat + Servlet
-1. [HTTP](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/java/myjava/practices/http/Server.java) is the protocol that is used to transfer data over the web.  
+1. [HTTP](https://github.com/Tenphun0503/Java_JavaWeb/blob/main/src/main/java/myjava/practices/http/Server.java) is the protocol that is used to transfer data over the web.  
 2. Tomcat is an open-source web server and servlet container developed by the Apache Software Foundation. 
 It is used to run Java web applications that are written in servlet and JSP (JavaServer Pages) technologies.  
 3. A servlet is a Java programming language class that is used to process HTTP requests and generate HTTP responses.
 
-#### 2. [Request + Response](https://github.com/Tenphun0503/Practices_Java/blob/main/src/main/java/myjava/practices/tomcat/ServletDemo.java)
+#### 2. [Request + Response](https://github.com/Tenphun0503/Java_JavaWeb/blob/main/src/main/java/myjava/practices/tomcat/ServletDemo.java)
 1. Request:Get request data.
    1. Get/Post
    2. Three parts
