@@ -9,9 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>myjava</groupId>
-    <artifactId>practices</artifactId>
+    <artifactId>Java_JavaWeb</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Practices-Java</name>
     <packaging>war</packaging>
     <description>notes and practices of learning Java</description>
     <properties>

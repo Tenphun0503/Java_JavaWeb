@@ -25,7 +25,7 @@ public class JDBCTest {
     //Setting
     private final String url = "jdbc:mysql://localhost:3306/db1";
     private final String user = "root";
-    private final String password = "DPcz@6330726";
+    private final String password = "root@1234";
 
 
     /**
