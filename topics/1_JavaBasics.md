@@ -83,14 +83,6 @@ class Example(){
 ### Ternary operator
 - `variable = (condition) ? expressionTrue : expressionFalse;`
 
-### Keywords
-1. public
-2. private
-3. protected
-4. static
-5. final: use if you don't want to overwrite existing values.
-   - `final int myNum = 15;`
-
 ### Memory space
 In Java, memory is managed automatically by the Java Virtual Machine (JVM), 
 which provides automatic garbage collection. The JVM divides the memory into 5 areas;
