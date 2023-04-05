@@ -1,5 +1,5 @@
 # Java Basics
-### *data types, arrays, control structures, methods*
+### *datatype, array, operator, methods, control structure*
 
 ---
 ### Comment in Java
@@ -13,7 +13,7 @@
  */
 ```
 
-### Data types
+### Datatype
 1. int (byte, short, long)
    - `int a = 2`
    - `long b = 2L`
@@ -49,6 +49,7 @@
         }
     }
     ```
+
 ### Method
 1. Use small camel naming convention
 2. Method Overloading: different number/type/order of parameters
