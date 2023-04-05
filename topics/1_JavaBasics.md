@@ -5,7 +5,6 @@
 ### *Variables and data types, control structures, methods and functions, arrays and collections*
 
 ---
-
 ### Comment in Java
 1. Single-line `//`
 2. Multi-line `/* */`
@@ -21,83 +20,178 @@
 1. String
 2. int (byte, short, long)
 3. float (double)
-- `float myNum = 5.75f;`
-- `double myNum = 19.99d;`
+   - `float myNum = 5.75f;`
+   - `double myNum = 19.99d;`
 4. char
 5. boolean
 
 ### Casting
 1. Widening Casting: small to large
-- `double myDouble = myInt;`
+   - `double myDouble = myInt;`
 2. Narrowing Casting: large to small
--  `int myInt = (int) myDouble;`
+   - `int myInt = (int) myDouble;`
+- See example:
+    ```java
+    class TypeCasting(){
+        public static void main(String[] args) {
+            byte a = 3, b = 4;
+            byte c = a + b;             // This will cause error 
+            //byte c = (byte)(a + b)    // byte is promoted into int when involved in mathematical operation.
+                                        // Same for short and char type
+  
+            byte d = 3 + 4;             // This won't cause error 
+                                        // a and b are variables, but 3 and 4 are constant. 
+                                        // Java has constant propagation optimization
+                                        // 3 + 4 is computed at compile time (javac).
+                                        // It equals to byte d = 7;
+  
+            a += 1;                     // This won't cause error
+                                        // This equals to a = (byte)(a + 1);
+        }
+    }
+    ```
+
+### Logical Operators
+1. &&-like are logical operators
+2. &-like are bitwise operators
 
 ### Keywords
 1. final: use if you don't want to overwrite existing values.
-- `final int myNum = 15;`
+   - `final int myNum = 15;`
+
+### Memory space
+In Java, memory is managed automatically by the Java Virtual Machine (JVM), 
+which provides automatic garbage collection. The JVM divides the memory into 5 areas;
+1. **Method Area:** The method area is a section of memory that stores class-level data,
+   such as class definitions, method and field names, and static variables.
+   It is shared among all threads and is created at JVM startup.
+2. **Stack:** Each thread in the JVM has its own stack, which is used to store local variables and method calls.
+   When a method is called, a new frame is added to the top of the stack, which contains the local variables and method arguments.
+   When the method returns, the frame is removed from the stack.
+3. **Heap:** The heap is the area of memory where objects are allocated.
+   It is a large pool of memory that is shared among all threads in the JVM. Objects are created on the heap using the "new" keyword,
+   and they are automatically garbage collected when they are no longer referenced.
+4. **Program Counter:** The program counter is a register in the JVM that stores the address of the current instruction being executed.
+5. **Native Heap:** The native heap is a separate memory space outside the JVM that is used to allocate native objects, 
+such as those created by JNI (Java Native Interface) calls. This memory is not automatically managed by the JVM and must be explicitly freed by the program.
+```java
+class Example{
+   public static void main(String[] args) {
+      int number = 100;
+      System.out.println(number);           // 100
+      change(number);
+      System.out.println(number);           // 100
+   }
+   public static void change(int number){
+       number = 200;
+   }
+}
+```
+> int variable store in stack with their value. 
+> 'number' in change() is only a local variable passed in and will be released them when exit the method. 
+> If number is an array, the result changes.
+```java
+class Example{
+   public static void main(String[] args) {
+      int[] array1 = {1, 2, 3};
+      int[] array2 = array1;
+              array2[0] = 0;
+              System.out.println(array1[0]);        // 0
+   }
+}
+```
+> Variables store in the stack, they record the address, where the object are allocated in the heap.
 
 ### Control structures
 1. If...Else
-2. Switch
-3. While Loop
-4. For Loop
+2. Switch case 
+   - control flow fall-through if case doesn't contain `break`
+   - can be used to execute same action for multiple case.
+   - same as `case 1,2,3,4` for JDK above 14
+   - simplify the switch code
+   ```java
+    public class Example{
+        public static void main(String[] args){
+            int week = 3;
+            switch (week){
+                case 1, 2, 3, 4, 5 -> System.out.println("Weekday");
+                case 6, 7 -> System.out.println("Weekend");
+                default -> System.out.println("Error"); 
+            } 
+        }   
+    }
+   ```
+3. For Loop: 
+   - `5.fori` == `for (int i=0; i<5; i++)` 
+4. While loop, do while loop
 5. Break/Continue
 
 ### Short Hand If...Else
-- `variable = (condition) ? expressionTrue : expressionFalse;`
+1. `variable = (condition) ? expressionTrue : expressionFalse;`
 
 ### Array
 1. Declare
-- `type[] variableName = { };`
-- `type[][] variableName = {{},{},...};`
-2. For-Each Loop
-- `for (type variableName : arrayName);`
+   - `type[] variableName = new type[]{ };` simplify as `type[] variableName = { };`
+   - Dynamically initialize: `type[] variableName = new type[5]`
+   - `type[][] variableName = {{},{},...};`
+2. Print a int[], we get `[I@27d6c5e0`
+   - `[`: This is an array; `@`: separate symbol; `I`: int type; `27d6c5e0`: memory address in hex
+3. Default value for using dynamically initialize an array:
+   - integer: 0
+   - decimal: 0.0
+   - boolean: false
+   - char:    '\u0000'
+   - String(reference type):  null 
+4. For-Each Loop
+   - `for (type variableName : arrayName);`
+5. Exceptions:
+   - `ArrayIndexOutOfBoundsExcpetion`
 
 ### [ArrayList](https://www.w3schools.com/java/java_arraylist.asp)
 1. Declare
-- `ArrayList<type> myArrayList = new ArrayList<type>();`
+   - `ArrayList<type> myArrayList = new ArrayList<type>();`
 2. Methods
-- `add(value)`
-- `get(index)`
-- `set(index, value)`
-- `remove(index)`
-- `clear()`
-- `size()`
+   - `add(value)`
+   - `get(index)`
+   - `set(index, value)`
+   - `remove(index)`
+   - `clear()`
+   - `size()`
 3. A String in Java is an object (not a primitive type). 
 To use other types, you must specify an equivalent [**wrapper class**](https://www.w3schools.com/java/java_wrapper_classes.asp)  
 4. Can be sorted using `sort()` of `Collections`
 
 ### [HashMap](https://www.w3schools.com/java/java_hashmap.asp)
 1. Declare
-- `HashMap<type, type> myHashMap = new HashMap<type, type>();`
+   - `HashMap<type, type> myHashMap = new HashMap<type, type>();`
 2. Methods
-- `put(key, value)`
-- `get(key)`
-- `remove(key)`
-- `clear()`
-- `size()`
-- `keySet() //All the keys`
-- `values() //All the values`
-- `containsKey(key)`
+   - `put(key, value)`
+   - `get(key)`
+   - `remove(key)`
+   - `clear()`
+   - `size()`
+   - `keySet() //All the keys`
+   - `values() //All the values`
+   - `containsKey(key)`
 
 ### HashSet
 A collection of items where every item is unique.
 1. Declare
-`HashSet<type> myHashSet = new HashSet<type>();`
-1. Methods
-- `add(value)`
-- `contains(value) //check if a value exists`
-- `remove(value)`
-- `clear()`
-- `size()`
+    `HashSet<type> myHashSet = new HashSet<type>();`
+2. Methods
+   - `add(value)`
+   - `contains(value) //check if a value exists`
+   - `remove(value)`
+   - `clear()`
+   - `size()`
 
 ### Others
-- User Input ([Scanner](https://www.w3schools.com/java/java_user_input.asp))
-- Use `Iterator` to create an iterator to loop through collections
-- `Iterator` can remove items in the looping, which `for` can't do
-- a wrapperClass.typeValue() can get corresponding value:   
-```
-Integer myInt = 5;
-int myIntValue = myInt.intValue()
-```
-- wrapper class can use `toString()` and `length()`
+1. User Input ([Scanner](https://www.w3schools.com/java/java_user_input.asp))
+2. Use `Iterator` to create an iterator to loop through collections
+3. `Iterator` can remove items in the looping, which `for` can't do
+4. a wrapperClass.typeValue() can get corresponding value:   
+    ```
+    Integer myInt = 5;
+    int myIntValue = myInt.intValue()
+    ```
+5. wrapper class can use `toString()` and `length()`
