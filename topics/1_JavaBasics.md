@@ -145,6 +145,14 @@ class Example{
         }   
     }
    ```
+   - use a labeled break statement to break out of a nested loop, and specify which loop to break out of by using the label.
+   ```
+   label: {
+    // code block
+    break label;
+   }
+   ```
+
 3. For Loop: 
    - `5.fori` == `for (int i=0; i<5; i++)` 
 4. While loop, do while loop
@@ -169,6 +177,54 @@ class Example{
 5. Exceptions:
    - `ArrayIndexOutOfBoundsExcpetion`
    - `NullPointerException`
+
+### String
+1. Immutable: String object can't be modified after creation. But can be replaced by another String object.
+2. String objects can be shared in a special area of memory called the "String Constant Pool". 
+When you create a string literal, it is automatically added to the pool. 
+If you create a new string object with the same value as an existing string in the pool, 
+the new object will actually reference the existing object in the pool rather than creating a new object
+3. Constructors:
+   1. `public String()`
+   2. `public String(char[] chs)`
+   3. `public String(String original)`
+4. Common method
+   1. `String.equals()`
+   2. `String.equalsIgnoreCase()`
+   3. `toCharArray()`
+   4. `charAt()`
+```java
+class  Example(){
+   public static void main(String[] args) {
+      String s1 = "abc";                    // s1 reference to address of string literal "abc" in String Constant Pool
+      String s2 = new String("abc");        // s2 reference to address of String object in heap
+                                            // which has a copy of "abc" in the pool
+      System.out.println(s1 == s2);         // false
+   }
+}
+```
+```java
+class Example(){
+   public static void main(String[] args) {
+      String s1 = "abc";
+      String s2 = "ab";
+      String s3 = s2 + "c";                 // In heap memory, a StringBuilder is created to concatenate "ab" and "c"
+                                            // Then StringBuilder uses toString() create a String object "abc"
+                                            // s3 reference to the address of the String object "abc"
+      System.out.println(s1 == s3);         // false
+   }
+}
+```
+```java
+class Example(){
+   public static void main(String[] args) {
+      String s1 = "abc";
+      String s2 = "a"+"b"+"c";              // "a","b","c" are literals, they are combined at compile time
+                                            // Java has constant propagation optimization
+      System.out.println(s1 == s2);         // true
+   }
+}
+```
 
 ---
 ### [ArrayList](https://www.w3schools.com/java/java_arraylist.asp)

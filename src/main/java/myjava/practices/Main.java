@@ -3,30 +3,37 @@ package myjava.practices;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
-    private int round = 0;
 
-    public void fun(){
-        if(round==5)return;
-        System.out.println(round++);
-
-        System.out.println("a");
-        this.fun();
-        System.out.println("b");
-        System.out.println("c");
+    public static int[] sortedSquares(int[] nums) {
+        int left = 0, right = nums.length - 1;
+        int[] res = new int[nums.length];
+        int index = 0;
+        while(left<right){
+            if(Math.abs(nums[left])>=Math.abs(nums[right])){
+                res[index] = nums[left] * nums[left];
+                left++;
+            }else{
+                res[index] = nums[right] * nums[right];
+                right--;
+            }
+            index ++;
+        }
+        left = 0;
+        right = nums.length-1;
+        while(left<right){
+            res[left] = res[left] ^ res[right];
+            res[right] = res[left] ^ res[right];
+            res[left] = res[left] ^ res[right];
+            right--;
+            left++;
+        }
+        return res;
     }
-
     public static void main(String[] args) {
-        Main m = new Main();
-        int[] nums = {2,3,4,5};
-        int[] nums2 = nums;
-        nums2[0] = 1;
-        System.out.println(Arrays.toString(nums));
-
-        System.out.print(1);
-        System.out.print(1);
-        System.out.print(1);
-
+        int[] nums = {-4,-1,0,3,10};
+        System.out.println(Arrays.toString(sortedSquares(nums)));
     }
 }
