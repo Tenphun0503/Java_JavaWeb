@@ -23,5 +23,10 @@ public class Main {
         int[] nums2 = nums;
         nums2[0] = 1;
         System.out.println(Arrays.toString(nums));
+
+        System.out.print(1);
+        System.out.print(1);
+        System.out.print(1);
+
     }
 }

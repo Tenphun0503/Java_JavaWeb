@@ -1,5 +1,5 @@
 # Object-Oriented Programming
-### [Code Reference](https://github.com/Tenphun0503/Java_JavaWeb/blob/main/src/main/java/myjava/practices/TopicReference.java)
+
 
 ---
 ### *Classes and objects, inheritance, polymorphism, encapsulation, abstraction*

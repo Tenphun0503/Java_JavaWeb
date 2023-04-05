@@ -1,8 +1,5 @@
 # Java Basics
-### [Code Reference](https://github.com/Tenphun0503/Java_JavaWeb/blob/main/src/main/java/myjava/practices/TopicReference.java)
-
----
-### *Variables and data types, control structures, methods and functions, arrays and collections*
+### *data types, arrays, control structures, methods*
 
 ---
 ### Comment in Java
@@ -16,14 +13,16 @@
  */
 ```
 
-### Variables and data types
-1. String
-2. int (byte, short, long)
-3. float (double)
+### Data types
+1. int (byte, short, long)
+   - `int a = 2`
+   - `long b = 2L`
+2. float (double)
    - `float myNum = 5.75f;`
-   - `double myNum = 19.99d;`
-4. char
-5. boolean
+   - `double myNum = 19.99;`
+3. char
+4. boolean
+5. String
 
 ### Casting
 1. Widening Casting: small to large
@@ -50,13 +49,45 @@
         }
     }
     ```
+### Method
+1. Use small camel naming convention
+2. Method Overloading: different number/type/order of parameters
+```java
+class Example(){
+   // Method Overloading
+   int sumOfNum(int x, int y){return x + y;}
+   float sumOfNum(float x, float y){return x + y;}
+}
+
+```
 
 ### Logical Operators
 1. &&-like are logical operators
 2. &-like are bitwise operators
+3. ^ is bitwise XOR operators
+   - a ^ b ^ b = a
+   ```java
+    class Example(){
+        public static void main(String[] args){
+            int a = 10; b = 20;
+            a = a ^ b;                  // a = 10 ^ 20
+            b = a ^ b;                  // b = 10 ^ 20 ^ 20 = 10
+            a = a ^ b;                  // a = 10 ^ 20 ^ 10 = 20
+            System.out.println(a);      // a = 20
+            System.out.println(b);      // b = 10
+        }
+    }
+   ```
+   
+### Ternary operator
+- `variable = (condition) ? expressionTrue : expressionFalse;`
 
 ### Keywords
-1. final: use if you don't want to overwrite existing values.
+1. public
+2. private
+3. protected
+4. static
+5. final: use if you don't want to overwrite existing values.
    - `final int myNum = 15;`
 
 ### Memory space
@@ -78,9 +109,9 @@ such as those created by JNI (Java Native Interface) calls. This memory is not a
 class Example{
    public static void main(String[] args) {
       int number = 100;
-      System.out.println(number);           // 100
+      System.out.println(number);           // number = 100
       change(number);
-      System.out.println(number);           // 100
+      System.out.println(number);           // number = 100
    }
    public static void change(int number){
        number = 200;
@@ -96,7 +127,7 @@ class Example{
       int[] array1 = {1, 2, 3};
       int[] array2 = array1;
               array2[0] = 0;
-              System.out.println(array1[0]);        // 0
+              System.out.println(array1[0]);        // array1[0] = 0
    }
 }
 ```
@@ -126,16 +157,14 @@ class Example{
 4. While loop, do while loop
 5. Break/Continue
 
-### Short Hand If...Else
-1. `variable = (condition) ? expressionTrue : expressionFalse;`
-
 ### Array
 1. Declare
    - `type[] variableName = new type[]{ };` simplify as `type[] variableName = { };`
-   - Dynamically initialize: `type[] variableName = new type[5]`
    - `type[][] variableName = {{},{},...};`
+   - Dynamically initialize: `type[] variableName = new type[5]`
 2. Print a int[], we get `[I@27d6c5e0`
    - `[`: This is an array; `@`: separate symbol; `I`: int type; `27d6c5e0`: memory address in hex
+   - if we print int[][], we get `[[I@...`
 3. Default value for using dynamically initialize an array:
    - integer: 0
    - decimal: 0.0
@@ -146,7 +175,9 @@ class Example{
    - `for (type variableName : arrayName);`
 5. Exceptions:
    - `ArrayIndexOutOfBoundsExcpetion`
+   - `NullPointerException`
 
+---
 ### [ArrayList](https://www.w3schools.com/java/java_arraylist.asp)
 1. Declare
    - `ArrayList<type> myArrayList = new ArrayList<type>();`
