@@ -1,13 +1,13 @@
 # Java Basics
 
 ---
-### _[datatype](#Datatype)_
-### _[methods](#Method)_
-### _[operator](#Operators)_
-### _[control structure](#Control structures)_
-### _[array](#Array)_
-### _[string](#String)_
-### _[collections](#Collections)_
+### _[1. datatype](#Datatype)_
+### _[2. methods](#Method)_
+### _[3. operator](#Operators)_
+### _[4. control structure](#ControlStructures)_
+### _[5. array](#Array)_
+### _[6. string](#String)_
+### _[7. collections](#Collections)_
 
 ---
 ### Comment in Java
@@ -139,7 +139,7 @@ class Example{
 > Variables store in the stack, they record the address, where the object are allocated in the heap.
 
 ---
-### Control structures
+### ControlStructures
 1. If...Else
 2. Switch case 
    - control flow fall-through if case doesn't contain `break`
