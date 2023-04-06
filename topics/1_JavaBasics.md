@@ -1,13 +1,13 @@
 # Java Basics
 
 ---
-### _[datatype](#datatype)_
-### _[methods](#method)_
-### _[operator](#operators)_
-### _[control structure](#controlStructures)_
-### _[array](#array)_
-### _[String](#string)_
-### _[collections](#collections)_
+### _[datatype](#Datatype)_
+### _[methods](#Method)_
+### _[operator](#Operators)_
+### _[control structure](#Control structures)_
+### _[array](#Array)_
+### _[string](#String)_
+### _[collections](#Collections)_
 
 ---
 ### Comment in Java
@@ -22,8 +22,6 @@
 ```
 
 ---
-<div id = 'datatype'>
-
 ### Datatype
 1. int (byte, short, long)
    - `int a = 2`
@@ -60,11 +58,8 @@
         }
     }
     ```
-</div>
 
 ---
-<div id = 'method'>
-
 ### Method
 1. Use small camel naming convention
 2. Method Overloading: different number/type/order of parameters
@@ -76,12 +71,9 @@ class Example(){
 }
 
 ```
-</div>
 
 ---
-<div id = 'operators'>
-
-### Logical Operators
+### Operators
 1. &&-like are logical operators
 2. &-like are bitwise operators
 3. ^ is bitwise XOR operators
@@ -101,7 +93,6 @@ class Example(){
    
 ### Ternary operator
 - `variable = (condition) ? expressionTrue : expressionFalse;`
-</div>
 
 ---
 ### Memory space
@@ -148,8 +139,6 @@ class Example{
 > Variables store in the stack, they record the address, where the object are allocated in the heap.
 
 ---
-<div id = 'controlStructures'>
-
 ### Control structures
 1. If...Else
 2. Switch case 
@@ -180,11 +169,8 @@ class Example{
    - `5.fori` == `for (int i=0; i<5; i++)` 
 4. While loop, do while loop
 5. Break/Continue
-</div>
 
 ---
-<div id = 'array'>
-
 ### Array
 1. Declare
    - `type[] variableName = new type[]{ };` simplify as `type[] variableName = { };`
@@ -204,11 +190,8 @@ class Example{
 5. Exceptions:
    - `ArrayIndexOutOfBoundsExcpetion`
    - `NullPointerException`
-</div>
 
 ---
-<div id = 'string'>
-
 ### String
 1. Immutable: String object can't be modified after creation. But can be replaced by another String object.
 2. String objects can be shared in a special area of memory called the "String Constant Pool". 
@@ -268,10 +251,9 @@ class Example(){
    1. `StringBuilder sb = new StringBuiler(string)`
    2. `String str = sb.toString()`
 3. `StringBuilder` is not safe to use concurrently in multiple threads without proper synchronization (`StringBuffer` is safe)
-</div>
 
 ---
-<div id = 'collections'>
+### Collections
 
 ### [ArrayList](https://www.w3schools.com/java/java_arraylist.asp)
 1. Declare
@@ -310,7 +292,6 @@ A collection of items where every item is unique.
    - `remove(value)`
    - `clear()`
    - `size()`
-</div>
 
 ---
 ### Others
