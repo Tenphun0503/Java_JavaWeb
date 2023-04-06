@@ -254,22 +254,39 @@ class Example(){
 
 ---
 ### Collections
+- `<>` is used for type inference in **generics**
+- `<>` take wrapper class such as `Integer`
 
-### [ArrayList](https://www.w3schools.com/java/java_arraylist.asp)
+### ArrayList
 1. Declare
-   - `ArrayList<type> myArrayList = new ArrayList<type>();`
-2. Methods
-   - `add(value)`
-   - `get(index)`
-   - `set(index, value)`
-   - `remove(index)`
+   - `ArrayLst list = new ArrayList()`
+   - `ArrayList<type> myArrayList = new ArrayList<>();`
+2. Common Methods
+   - `boolean add(E e)`
+   - `void add(int i, E e)`
+   - `E get(int i)`
+   - `E set(int i, E e)`:    set value e to index i and return the replaced value
+   - `E remove(int i)`
+   - `boolean remove(Object o)`
+   - `boolean contains(Object o)`
    - `clear()`
    - `size()`
-3. A String in Java is an object (not a primitive type). 
-To use other types, you must specify an equivalent [**wrapper class**](https://www.w3schools.com/java/java_wrapper_classes.asp)  
-4. Can be sorted using `sort()` of `Collections`
+3. `ArrayList` is created with a default capacity of 10.
+4. Once it needs more capacity, it copies all values to a new List with 1.5 of capacity than original one
+```java
+class Example{
+   public static void main(String[] args) {
+      ArrayList<String> list = new ArrayList<>();
+      process(list);                // we pass the address as the argument into the process() method
+                                    // so in process(), it references same ArrayList object in the memory
+   }
+   private static void process(ArrayList<String> list){
+       // processing the list
+   }
+}
+```
 
-### [HashMap](https://www.w3schools.com/java/java_hashmap.asp)
+### HashMap
 1. Declare
    - `HashMap<type, type> myHashMap = new HashMap<type, type>();`
 2. Methods
@@ -295,12 +312,8 @@ A collection of items where every item is unique.
 
 ---
 ### Others
-1. User Input ([Scanner](https://www.w3schools.com/java/java_user_input.asp))
-2. Use `Iterator` to create an iterator to loop through collections
-3. `Iterator` can remove items in the looping, which `for` can't do
-4. a wrapperClass.typeValue() can get corresponding value:   
-    ```
-    Integer myInt = 5;
-    int myIntValue = myInt.intValue()
-    ```
-5. wrapper class can use `toString()` and `length()`
+1. To compare string with string literal, we put literal at the front (so we don't have to care if string is null)
+   - `"abca".equals(s)`
+2. ArrayList.remove(Object o), it removes the first occurrence of the specified element from the list and shifts any subsequent elements to the left. 
+So if we iterate the List and remove multiple elements, we'd better iterate from back to front.
+Or `i--` everytime after removing.
