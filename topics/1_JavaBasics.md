@@ -1,5 +1,13 @@
 # Java Basics
-### *datatype, array, operator, methods, control structure*
+
+---
+### _[datatype](#datatype)_
+### _[methods](#method)_
+### _[operator](#operators)_
+### _[control structure](#controlStructures)_
+### _[array](#array)_
+### _[String](#string)_
+### _[collections](#collections)_
 
 ---
 ### Comment in Java
@@ -12,6 +20,9 @@
  *  Development document description
  */
 ```
+
+---
+<div id = 'datatype'/>
 
 ### Datatype
 1. int (byte, short, long)
@@ -50,6 +61,9 @@
     }
     ```
 
+---
+<div id = 'method'/>
+
 ### Method
 1. Use small camel naming convention
 2. Method Overloading: different number/type/order of parameters
@@ -61,6 +75,9 @@ class Example(){
 }
 
 ```
+
+---
+<div id = 'operators'/>
 
 ### Logical Operators
 1. &&-like are logical operators
@@ -83,6 +100,7 @@ class Example(){
 ### Ternary operator
 - `variable = (condition) ? expressionTrue : expressionFalse;`
 
+---
 ### Memory space
 In Java, memory is managed automatically by the Java Virtual Machine (JVM), 
 which provides automatic garbage collection. The JVM divides the memory into 5 areas;
@@ -126,6 +144,9 @@ class Example{
 ```
 > Variables store in the stack, they record the address, where the object are allocated in the heap.
 
+---
+<div id = 'controlStructures'/>
+
 ### Control structures
 1. If...Else
 2. Switch case 
@@ -152,11 +173,13 @@ class Example{
     break label;
    }
    ```
-
 3. For Loop: 
    - `5.fori` == `for (int i=0; i<5; i++)` 
 4. While loop, do while loop
 5. Break/Continue
+
+---
+<div id = 'array'/>
 
 ### Array
 1. Declare
@@ -178,6 +201,9 @@ class Example{
    - `ArrayIndexOutOfBoundsExcpetion`
    - `NullPointerException`
 
+---
+<div id = 'string'/>
+
 ### String
 1. Immutable: String object can't be modified after creation. But can be replaced by another String object.
 2. String objects can be shared in a special area of memory called the "String Constant Pool". 
@@ -193,6 +219,9 @@ the new object will actually reference the existing object in the pool rather th
    2. `String.equalsIgnoreCase()`
    3. `toCharArray()`
    4. `charAt()`
+   5. `substring()`
+   6. `replace()`
+   7. `split()`: `.` means anything, so if you want to split based on `.`, use`\\.`
 ```java
 class  Example(){
    public static void main(String[] args) {
@@ -226,7 +255,18 @@ class Example(){
 }
 ```
 
+### StringBuilder
+1. Common Methods
+   1. `append()`
+   2. `reverse()`
+2. Convert to and from String
+   1. `StringBuilder sb = new StringBuiler(string)`
+   2. `String str = sb.toString()`
+3. `StringBuilder` is not safe to use concurrently in multiple threads without proper synchronization (`StringBuffer` is safe)
+
 ---
+<div id = 'collections'/>
+
 ### [ArrayList](https://www.w3schools.com/java/java_arraylist.asp)
 1. Declare
    - `ArrayList<type> myArrayList = new ArrayList<type>();`
