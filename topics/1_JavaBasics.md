@@ -22,7 +22,7 @@
 ```
 
 ---
-<div id = 'datatype'/>
+<div id = 'datatype'>
 
 ### Datatype
 1. int (byte, short, long)
@@ -60,9 +60,10 @@
         }
     }
     ```
+</div>
 
 ---
-<div id = 'method'/>
+<div id = 'method'>
 
 ### Method
 1. Use small camel naming convention
@@ -75,9 +76,10 @@ class Example(){
 }
 
 ```
+</div>
 
 ---
-<div id = 'operators'/>
+<div id = 'operators'>
 
 ### Logical Operators
 1. &&-like are logical operators
@@ -99,6 +101,7 @@ class Example(){
    
 ### Ternary operator
 - `variable = (condition) ? expressionTrue : expressionFalse;`
+</div>
 
 ---
 ### Memory space
@@ -145,7 +148,7 @@ class Example{
 > Variables store in the stack, they record the address, where the object are allocated in the heap.
 
 ---
-<div id = 'controlStructures'/>
+<div id = 'controlStructures'>
 
 ### Control structures
 1. If...Else
@@ -177,9 +180,10 @@ class Example{
    - `5.fori` == `for (int i=0; i<5; i++)` 
 4. While loop, do while loop
 5. Break/Continue
+</div>
 
 ---
-<div id = 'array'/>
+<div id = 'array'>
 
 ### Array
 1. Declare
@@ -200,9 +204,10 @@ class Example{
 5. Exceptions:
    - `ArrayIndexOutOfBoundsExcpetion`
    - `NullPointerException`
+</div>
 
 ---
-<div id = 'string'/>
+<div id = 'string'>
 
 ### String
 1. Immutable: String object can't be modified after creation. But can be replaced by another String object.
@@ -263,9 +268,10 @@ class Example(){
    1. `StringBuilder sb = new StringBuiler(string)`
    2. `String str = sb.toString()`
 3. `StringBuilder` is not safe to use concurrently in multiple threads without proper synchronization (`StringBuffer` is safe)
+</div>
 
 ---
-<div id = 'collections'/>
+<div id = 'collections'>
 
 ### [ArrayList](https://www.w3schools.com/java/java_arraylist.asp)
 1. Declare
@@ -304,7 +310,9 @@ A collection of items where every item is unique.
    - `remove(value)`
    - `clear()`
    - `size()`
+</div>
 
+---
 ### Others
 1. User Input ([Scanner](https://www.w3schools.com/java/java_user_input.asp))
 2. Use `Iterator` to create an iterator to loop through collections
