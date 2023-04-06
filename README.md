@@ -16,7 +16,7 @@
         <td>Install JDK and an IDE, try "Hello, World!"</td>
     </tr>
     <tr>
-        <td><a href="https://github.com/Tenphun0503/Java_JavaWeb/blob/main/topics/1_JavaBasics.md">Java Basics</a></td>
+        <td><a href="topics/1_JavaBasics.md">Java Basics</a></td>
         <td>Variables and data types, control structures, methods and functions, arrays and collections</td>
     </tr>
     <tr>

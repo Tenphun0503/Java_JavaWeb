@@ -165,6 +165,7 @@ class Example{
     break label;
    }
    ```
+   - Or we can use `System.exit(0)` to stop the JVM.
 3. For Loop: 
    - `5.fori` == `for (int i=0; i<5; i++)` 
 4. While loop, do while loop
