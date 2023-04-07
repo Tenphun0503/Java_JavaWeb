@@ -20,7 +20,7 @@
         <td>Variables and data types, control structures, methods and functions, arrays and collections</td>
     </tr>
     <tr>
-        <td><a href="https://github.com/Tenphun0503/Java_JavaWeb/blob/main/topics/2_ObjectOrientedProgramming.md">Object-Oriented Programming</a></td>
+        <td><a href="topics/2_ObjectOrientedProgramming.md">Object-Oriented Programming</a></td>
         <td>Classes and objects, inheritance, polymorphism, encapsulation, abstraction</td>
     </tr>
     <tr>
@@ -28,7 +28,7 @@
         <td>Handling exceptions, try-catch-finally blocks</td>
     </tr>
     <tr>
-        <td><a href="https://github.com/Tenphun0503/Java_JavaWeb/blob/main/topics/3_FileHandling.md">Input and Output</a></td>
+        <td><a href="topics/3_FileHandling.md">Input and Output</a></td>
         <td>Reading and writing files, working with streams</td>
     </tr>
     <tr>
@@ -36,11 +36,11 @@
         <td>Creating and managing threads, synchronization and locks</td>
     </tr>
     <tr>
-        <td><a href="https://github.com/Tenphun0503/Java_JavaWeb/blob/main/topics/5_JavaWeb.md">Java Web</a></td>
+        <td><a href="topics/4_JavaWeb.md">Java Web</a></td>
         <td>Quick look of database, the front end. Web-related knowledge</td>
     </tr>
     <tr>
-        <td><a href="https://github.com/Tenphun0503/Java_JavaWeb/blob/main/topics/4_ToolsAndFrameworks.md">Tools and Frameworks</a></td>
+        <td><a href="topics/5_ToolsAndFrameworks.md">Tools and Frameworks</a></td>
         <td>Build tools like Maven or Gradle, unit testing frameworks like JUnit or TestNG, web frameworks like Spring or Struts</td>
     </tr>
 </table>
