@@ -157,11 +157,18 @@ An interface is a collection of abstract methods and constant declarations that 
 ### Features
 - Child class implements an interface must implements all of its methods, or can be an abstract class.
 - Interface has no constructor.
-- All member attributes are implicitly `public`, `static` and `final`
-- All methods are implicitly `public` and `abstract`
+- All member attributes are implicitly `public`, `static` and `final`.
+- All methods are implicitly `public` and `abstract`.
+- Can define default method with `default`, e.g. `public default void show(){}`. (JDK8)
+  - `default` keyword must be written.
+  - implement class can override default methods.
+  - if implements class implements multiple interfaces, can use `InterfaceName.super.method` to refer specific method.
+- Can define static method with `static`. (JDK8)
+  - These static methods can only be called with `InterfaceName.methods`.
+- Can define private method in interface (serve for other default or static method). (JDK9) 
 - A class can implements multiple interfaces.
 - Interface can `extends` other Interfaces, even more than one Interfaces.
-- Usually used to define behavior (e.g. service).
+- Interface is usually used to define behavior (e.g. service).
 
 ---
 ## Polymorphism
