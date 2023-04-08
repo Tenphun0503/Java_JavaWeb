@@ -1,13 +1,13 @@
 # Java Basics
 
 ---
-### _[1. datatype](#Datatype)_
-### _[2. methods](#Method)_
-### _[3. operator](#Operators)_
-### _[4. control structure](#ControlStructures)_
-### _[5. array](#Array)_
-### _[6. string](#String)_
-### _[7. collections](#Collections)_
+### _[1. Datatype](#Datatype)_
+### _[2. Methods](#Method)_
+### _[3. Operator](#Operators)_
+### _[4. Control structure](#ControlStructures)_
+### _[5. Array](#Array)_
+### _[6. String](#String)_
+### _[7. Others](#Others)_
 
 ---
 ### Comment in Java
@@ -254,67 +254,20 @@ class Example(){
 3. `StringBuilder` is not safe to use concurrently in multiple threads without proper synchronization (`StringBuffer` is safe)
 
 ---
-### Collections
-- `<>` is used for type inference in **generics**
-- `<>` take wrapper class such as `Integer`
-
-### ArrayList
-1. Declare
-   - `ArrayLst list = new ArrayList()`
-   - `ArrayList<type> myArrayList = new ArrayList<>();`
-2. Common Methods
-   - `boolean add(E e)`
-   - `void add(int i, E e)`
-   - `E get(int i)`
-   - `E set(int i, E e)`:    set value e to index i and return the replaced value
-   - `E remove(int i)`
-   - `boolean remove(Object o)`
-   - `boolean contains(Object o)`
-   - `clear()`
-   - `size()`
-3. `ArrayList` is created with a default capacity of 10.
-4. Once it needs more capacity, it copies all values to a new List with 1.5 of capacity than original one
-```java
-class Example{
-   public static void main(String[] args) {
-      ArrayList<String> list = new ArrayList<>();
-      process(list);                // we pass the address as the argument into the process() method
-                                    // so in process(), it references same ArrayList object in the memory
-   }
-   private static void process(ArrayList<String> list){
-       // processing the list
-   }
-}
-```
-
-### HashMap
-1. Declare
-   - `HashMap<type, type> myHashMap = new HashMap<type, type>();`
-2. Methods
-   - `put(key, value)`
-   - `get(key)`
-   - `remove(key)`
-   - `clear()`
-   - `size()`
-   - `keySet() //All the keys`
-   - `values() //All the values`
-   - `containsKey(key)`
-
-### HashSet
-A collection of items where every item is unique.
-1. Declare
-    `HashSet<type> myHashSet = new HashSet<type>();`
-2. Methods
-   - `add(value)`
-   - `contains(value) //check if a value exists`
-   - `remove(value)`
-   - `clear()`
-   - `size()`
-
----
 ### Others
-1. To compare string with string literal, we put literal at the front (so we don't have to care if string is null)
+#### String.equals
+- To compare string with string literal, we put literal at the front (so we don't have to care if string is null)
    - `"abca".equals(s)`
-2. ArrayList.remove(Object o), it removes the first occurrence of the specified element from the list and shifts any subsequent elements to the left. 
+#### ArrayList.remove()
+- ArrayList.remove(Object o), it removes the first occurrence of the specified element from the list and shifts any subsequent elements to the left. 
 So if we iterate the List and remove multiple elements, we'd better iterate from back to front.
 Or `i--` everytime after removing.
+#### CodeBlock
+1. Local code block: Defined within a method or another block. 
+Local code blocks are used to group statements together and to limit the scope of variables declared within the block.
+2. Instance initializer block: Defined within a class outside any method, and is used to initialize instance variables. 
+Instance initializer blocks are executed whenever a new instance of the class is created.
+3. Static initializer block: Defined within a class outside any method and modified with `static`. It is used to initialize static variables. 
+Static initializer blocks are executed once when the class is loaded into memory.
+   - static attributes with complex initialization
+   - static attributes loaded from properties files

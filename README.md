@@ -12,23 +12,27 @@
         <th>Description</th>
     </tr>
     <tr>
-        <td><a href="https://www.w3schools.com/java/java_getstarted.asp">Getting start</a></td>
-        <td>Install JDK and an IDE, try "Hello, World!"</td>
-    </tr>
-    <tr>
         <td><a href="topics/1_JavaBasics.md">Java Basics</a></td>
         <td>Variables and data types, control structures, methods and functions, arrays and collections</td>
     </tr>
     <tr>
-        <td><a href="topics/2_ObjectOrientedProgramming.md">Object-Oriented Programming</a></td>
+        <td><a href="topics/2_Collections.md">Collections</a></td>
+        <td>Collections and Arrays</td>
+    </tr>
+    <tr>
+        <td><a href="topics/3_ObjectOrientedProgramming.md">Object-Oriented Programming</a></td>
         <td>Classes and objects, inheritance, polymorphism, encapsulation, abstraction</td>
+    </tr>
+    <tr>
+        <td><a href="topics/4_DesignPattern.md">Design Pattern</a></td>
+        <td>Design Patterns and their purpose and use case.</td>
     </tr>
     <tr>
         <td><a href="#exceptions">Exception Handling</a></td>
         <td>Handling exceptions, try-catch-finally blocks</td>
     </tr>
     <tr>
-        <td><a href="topics/3_FileHandling.md">Input and Output</a></td>
+        <td><a href="topics/5_InputAndOutput.md">Input and Output</a></td>
         <td>Reading and writing files, working with streams</td>
     </tr>
     <tr>
@@ -36,11 +40,11 @@
         <td>Creating and managing threads, synchronization and locks</td>
     </tr>
     <tr>
-        <td><a href="topics/4_JavaWeb.md">Java Web</a></td>
+        <td><a href="topics/6_JavaWeb.md">Java Web</a></td>
         <td>Quick look of database, the front end. Web-related knowledge</td>
     </tr>
     <tr>
-        <td><a href="topics/5_ToolsAndFrameworks.md">Tools and Frameworks</a></td>
+        <td><a href="topics/7_ToolsAndFrameworks.md">Tools and Frameworks</a></td>
         <td>Build tools like Maven or Gradle, unit testing frameworks like JUnit or TestNG, web frameworks like Spring or Struts</td>
     </tr>
 </table>

@@ -1,12 +1,12 @@
 # Object-Oriented Programming
 
 ---
-### _[1. class](#Class)_
-### _[2. encapsulation](#Encapsulation)_
-### _[3. inheritance](#Inheritance)_
-### _[4. abstraction](#Abstraction)_
-### _[5. interface](#Interface)_
-### _[6. polymorphism](#Polymorphism)_
+### _[1. Class](#Class)_
+### _[2. Encapsulation](#Encapsulation)_
+### _[3. Inheritance](#Inheritance)_
+### _[4. Abstraction](#Abstraction)_
+### _[5. Interface](#Interface)_
+### _[6. Polymorphism](#Polymorphism)_
 
 ---
 ## Class
@@ -93,6 +93,70 @@ and default to control the visibility of data members and methods in a class.
    - Constant: the naming convention is to use all capital letters and separate words with underscores
    - use if you don't want to overwrite existing values. 
    - `final int myNum = 15;`
+
+### Nested class (inner class)
+```java
+class Outer{
+    class Inner {}
+}
+```
+- To instantiate an Inner class out of Outer class, we write: `Outer.Inner in = new Outer().new Inner();`
+- Inner class can directly access members of its outer class
+- Outer class has to instantiate its inner class to access members of inner class;
+```java
+class Outer{
+    int num = 10;
+    class Inner{
+        int num = 20;
+        void show(){
+            int num = 30;
+            System.out.println(num);                // 30
+            System.out.println(this.num);           // 20
+            System.out.println(Outer.this.num);     // 10
+        }
+    }
+}
+```
+- Type of inner class
+  - Member inner class
+  - Static inner class: Member inner class with `static`
+  - Local inner class: defined in method, code-block, constructors
+  - Anonymous inner class: Local inner class without a name. Defined and instantiated in a single expression 
+    - new Class(){} : extends Class
+    - new Interface(){} : implements Interface
+    - For example: sort(new Comparator<K>(){});
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            List<Integer> nums = Arrays.asList(1, 3, 2, 5, 4);
+            nums.sort(new Comparator<Integer>() {
+                @Override
+                public int compare(Integer o1, Integer o2) {
+                    return o2.compareTo(o1);
+                }
+            });
+            System.out.println(nums);                   // [5, 4, 3, 2, 1]
+        }
+    
+    }
+    ```
+    - We can also use Lambda to simplify anonymous class;
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            List<Integer> nums = Arrays.asList(1, 3, 2, 5, 4);
+            nums.sort((o1, o2) -> o2.compareTo(o1));
+            System.out.println(nums);                   // [5, 4, 3, 2, 1]
+        }
+    }
+    ```
+### Lambda
+- `() -> {}` (parameters of Override methods of anonymous class) -> {method code}
+- lambdas can only be used with functional interfaces, which are interfaces that have a single abstract method.
+- If an interface can be annotated with `@FunctionalInterface`, it is a functional interface
+- In lambda, we can omit the parameter types
+- In lambda, if there is only one parameter, we can omit the `()`
+- In lambda, if there is only one line of code, we can omit the `{};`, if the line is a return line, omit the `return`
 
 ---
 ## Inheritance
