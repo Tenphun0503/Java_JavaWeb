@@ -1,15 +1,23 @@
-# Collections
+# Collections and Maps
 
 ---
-### _[1. ArrayList](#ArrayList)_
+### _[1. Collection](#Collection)_
+### _[2. List](#List)_
+### _[3. ArrayList](#ArrayList)_
+### _[4. LinkedList](#LinkedList)_
 ### _[2. HashMap](#HashMap)_
 ### _[3. HashSet](#HashSet)_
 
 ---
-## Collections
-- `<>` is used for type inference in **generics**
-- `<>` take wrapper class such as `Integer`
+### Collection
 
+
+---
+### List
+
+
+
+---
 ### ArrayList
 1. Declare
     - `ArrayLst list = new ArrayList()`
@@ -39,6 +47,10 @@ class Example{
 }
 ```
 
+---
+### LinkedList
+
+---
 ### HashMap
 1. Declare
     - `HashMap<type, type> myHashMap = new HashMap<type, type>();`
@@ -52,6 +64,7 @@ class Example{
     - `values() //All the values`
     - `containsKey(key)`
 
+---
 ### HashSet
 A collection of items where every item is unique.
 1. Declare

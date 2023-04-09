@@ -17,6 +17,7 @@ Every class in Java is a subclass of Object, and therefore inherits certain meth
   - `return (this == equal)`
 - `toString()`: Returns a string representation of the object.
   - `return getClass().getName() + "@" + Integer.toHexString(hashCode());`
+- `clone()`
 - `hashCode()`: Returns a hash code value for the object.
 - `getClass()`: Returns the runtime class of the object.
 - `wait()`, `notify()`, and `notifyAll()`: Used for inter-thread communication and synchronization.

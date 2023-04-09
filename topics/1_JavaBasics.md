@@ -272,3 +272,14 @@ Instance initializer blocks are executed whenever a new instance of the class is
 Static initializer blocks are executed once when the class is loaded into memory.
    - static attributes with complex initialization
    - static attributes loaded from properties files
+#### Regular expression
+In Java, regular expressions are implemented using the java.util.regex package.  
+`string.matches(regexString)`
+- `.` - Matches any single character except newline.
+- `[]` - Matches any single character specified in the brackets. For example, [abc] matches any single character a, b, or c.
+- `[^]` - Matches any single character that is not specified in the brackets. For example, [^abc] matches any single character except a, b, or c.
+- `*` - Matches zero or more occurrences of the preceding character or group.
+- `+` - Matches one or more occurrences of the preceding character or group.
+- `?` - Matches zero or one occurrence of the preceding character or group.
+- `|` - Matches either the left or the right expression.
+- `()` - Groups expressions together.

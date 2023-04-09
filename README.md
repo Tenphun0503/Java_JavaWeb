@@ -16,8 +16,8 @@
         <td>Variables and data types, control structures, methods and functions, arrays and collections</td>
     </tr>
     <tr>
-        <td><a href="topics/2_Collections.md">Collections</a></td>
-        <td>Collections and Arrays</td>
+        <td><a href="topics/2_CollectionsMaps.md">Collections and Maps</a></td>
+        <td>Collections and Maps</td>
     </tr>
     <tr>
         <td><a href="topics/3_ObjectOrientedProgramming.md">Object-Oriented Programming</a></td>
