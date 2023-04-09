@@ -6,6 +6,7 @@
 ### _[3. System](#System)_
 ### _[4. BigDecimal](#BigDecimal)_
 ### _[5. Wrapped Class](#WrappedClass)_
+### _[6. Arrays](#Arrays)_
 
 ---
 ## Object
@@ -119,3 +120,14 @@ class Example{
   }
 }
 ```
+
+---
+## Arrays
+`Arrays` class provides a set of static methods for working with arrays. 
+These methods can be used to perform various operations on arrays, such as sorting, searching, and copying.
+### Common Methods
+- `public static String toString(T[] a)`
+- `public static boolean equals(T[], T[] b)`
+- `public static int binarySearch(int[], int key)`: Searches the specified array for the specified object using the binary search algorithm.
+- `public static void sort(T[] a)`
+- `public static void sort(T[] a, Comparator<? super T> c)`: Sorts the specified array of objects according to the order induced by the specified comparator.
