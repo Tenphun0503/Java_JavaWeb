@@ -1,9 +1,9 @@
 # Collections
 
 ---
-### [1. ArrayList](#ArrayList)
-### [2. HashMap](#HashMap)
-### [3. HashSet](#HashSet)
+### _[1. ArrayList](#ArrayList)_
+### _[2. HashMap](#HashMap)_
+### _[3. HashSet](#HashSet)_
 
 ---
 ## Collections

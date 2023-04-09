@@ -28,6 +28,10 @@
         <td>Design Patterns and their purpose and use case.</td>
     </tr>
     <tr>
+        <td><a href="topics/5_CommonAPI.md">Common API</a></td>
+        <td>Object, Math, System, BigDecimal</td>
+    </tr>
+    <tr>
         <td><a href="#exceptions">Exception Handling</a></td>
         <td>Handling exceptions, try-catch-finally blocks</td>
     </tr>

@@ -75,6 +75,7 @@ class Example(){
 ---
 ### Operators
 1. &&-like are logical operators
+   - `a==b && c==d`: if `a==b` is false, then directly return false. right part won't be checked; `||` is same;
 2. &-like are bitwise operators
 3. ^ is bitwise XOR operators
    - a ^ b ^ b = a
