@@ -283,3 +283,5 @@ In Java, regular expressions are implemented using the java.util.regex package.
 - `?` - Matches zero or one occurrence of the preceding character or group.
 - `|` - Matches either the left or the right expression.
 - `()` - Groups expressions together.
+#### Comparator
+`return o1 - o2`, `o1` is current object, if `o1 - o2 < 0`, means that `o1` is smaller and should be placed at front;

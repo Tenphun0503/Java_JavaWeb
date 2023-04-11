@@ -5,10 +5,11 @@
 ### _[2. List](#List)_
 ### _[3. ArrayList](#ArrayList)_
 ### _[4. LinkedList](#LinkedList)_
-### _[5. Set](#Set)_
-### _[6. HashSet](#HashSet)_
-### _[7. LinkedHashSet](#LinkedHashSet)_
-### _[8. TreeSet](#TreeSet)_
+### _[5 Note: Tree](#Tree)_
+### _[6. Set](#Set)_
+### _[7. HashSet](#HashSet)_
+### _[8. LinkedHashSet](#LinkedHashSet)_
+### _[9. TreeSet](#TreeSet)_
 ### _[2. HashMap](#HashMap)_
 
 ---
@@ -106,6 +107,61 @@ Implemented by double linked list
 2. when adding an element, call linkLast(e)
 3. linkLast add element at the tail of the linkedList
 
+--- 
+## Tree
+### BinaryTree
+Degree of each node <= 2
+### BinarySearchTree
+node.left.val < node.val < node.right.val
+### BinaryBalancedTree
+A BST that height of the left and right subtrees of any node differs by at most one
+- when adding a node causes unbalance. Search the unbalanced node from the added node upward to root
+- Find the unbalanced node, if number of left sub-nodes less than right part, use left rotation.
+- left rotation:
+   - make unbalanced node as pivot, it will be replaced by a new node
+   - left rotate the pivot as a left child of the new node
+   - left rotate the original right child of the pivot as the new node
+   - if original right child has left child, make that left child as the right child of the pivot
+- right rotation:
+   - make unbalanced node as pivot, it will be replaced by a new node
+   - right rotate the pivot as a right child of the new node
+   - right rotate the original left child of the pivot as the new node
+   - if original left child has right child, make that right child as the left child of the pivot
+- left and left: if adding a node to the left subtree of the left subtree of the root causes unbalance
+   - make one right rotate on the root
+- left and right: if adding a node to the right subtree of the left subtree of the root causes unbalance
+   - left rotate the left subtree of the root (it becomes ll) and then right rotate the root
+- right and right: if adding a node to the right subtree of the right subtree of the root causes unbalance
+   - make one left rotate on the root
+- right and left: if adding a node to the left subtree of the right subtree of the root causes unbalance
+   - right rotate the right subtree of the root (it becomes rr) and then left rotate the root
+### RedBlackTree
+- Is a type of self-balancing Binary Search Tree
+- Key properties:
+   - each node must be red or black
+   - root must be black
+   - In a Red-Black Tree, a **Nil** node is a special type of node that represents a null or empty node in the tree.
+   - Nil can be children of the leaves or parent of the root, and should be black.
+   - if a node is red, its children must be black
+   - black-height: for every node, the path from it to all of its leaves(Nils) should have same amount of black nodes.
+- Adding a node
+   1. by default, the added node should be a red node, use it as current node.
+   2. if current node is root
+      - change it to black
+   3. if parent of current node is black
+      - do nothing
+   4. if parent of current node is red
+      - if uncle is red:
+         1. set parent black, set uncle black
+         2. set grandparent red
+         3. use grandparent as current node, and do all the previous steps again
+      - if uncle is black, and current node is right child of the parent
+         1. set parent as current node and left rotate it, and do all the previous steps again
+      - if uncle is black, and current node is left child of the parent
+         1. set parent as black
+         2. set grandparent as red
+         3. right rotate the grandparent
+
 ---
 ## Set
 Has no order, no duplicate, no index
@@ -147,57 +203,12 @@ ordered: the order of insertion and query is same
 
 ---
 ## TreeSet
-### Tree, BinaryTree, BinarySearchTree, BinaryBalancedTree, RedBlackTree
-- **BinaryTree**: Degree of each node <= 2
-- **BinarySearchTree**: node.left.val < node.val < node.right.val
-- **BinaryBalancedTree**: a bst that height of the left and right subtrees of any node differs by at most one
-  - when adding a node causes unbalance. Search the unbalanced node from the added node upward to root
-  - Find the unbalanced node, if number of left sub-nodes less than right part, use left rotation.
-  - left rotation: 
-    - make unbalanced node as pivot, it will be replaced by a new node
-    - left rotate the pivot as a left child of the new node
-    - left rotate the original right child of the pivot as the new node
-    - if original right child has left child, make that left child as the right child of the pivot
-  - right rotation:
-    - make unbalanced node as pivot, it will be replaced by a new node
-    - right rotate the pivot as a right child of the new node
-    - right rotate the original left child of the pivot as the new node
-    - if original left child has right child, make that right child as the left child of the pivot
-  - left and left: if adding a node to the left subtree of the left subtree of the root causes unbalance
-    - make one right rotate on the root
-  - left and right: if adding a node to the right subtree of the left subtree of the root causes unbalance
-    - left rotate the left subtree of the root (it becomes ll) and then right rotate the root
-  - right and right: if adding a node to the right subtree of the right subtree of the root causes unbalance
-     - make one left rotate on the root
-  - right and left: if adding a node to the left subtree of the right subtree of the root causes unbalance
-    - right rotate the right subtree of the root (it becomes rr) and then left rotate the root
-- **RedBlackTree**
-  - Is a type of self-balancing Binary Search Tree
-  - Key properties:
-    - each node must be red or black
-    - root must be black
-    - In a Red-Black Tree, a **Nil** node is a special type of node that represents a null or empty node in the tree.
-    - Nil can be children of the leaves or parent of the root, and should be black.
-    - if a node is red, its children must be black 
-    - black-height: for every node, the path from it to all of its leaves(Nils) should have same amount of black nodes.
-  - Adding a node
-    1. by default, the added node should be a red node, use it as current node.
-    2. if current node is root
-       - change it to black
-    3. if parent of current node is black
-       - do nothing
-    4. if parent of current node is red
-       - if uncle is red:
-         1. set parent black, set uncle black
-         2. set grandparent red
-         3. use grandparent as current node, and do all the previous steps again
-       - if uncle is black, and current node is right child of the parent
-         1. set parent as current node and left rotate it, and do all the previous steps again 
-       - if uncle is black, and current node is left child of the parent
-         1. set parent as black
-         2. set grandparent as red
-         3. right rotate the grandparent
-
+implemented by Red-Black Tree, so it is sorted
+### Features
+- for numeric types, sorts from ascending
+- for char, string, sorts from ascending according to ASCII table
+- for self-defined class, have to implements Comparable interface and override `compareTo()`
+- also can create a comparator when creating the TreeSet
 
 ---
 ## HashMap
