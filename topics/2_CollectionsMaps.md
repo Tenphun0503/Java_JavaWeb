@@ -10,22 +10,28 @@
 ### _[7. HashSet](#HashSet)_
 ### _[8. LinkedHashSet](#LinkedHashSet)_
 ### _[9. TreeSet](#TreeSet)_
-### _[2. HashMap](#HashMap)_
+### _[10. Map](#Map)_
+### _[11. HashMao](#HashMap)_
+### _[12. LinkedHashMap](#LinkedHashMap)_
+### _[13. TreeMap](#TreeMap)_
+### _[14. Collections](#Collections)_
 
 ---
 ## Intro
-1. Collections take single elements and Maps take pairs.  
+1. Collections take single elements and Maps take entries (Key-Value).  
 2. Collection(I):
-   - List(I)
-      - ArrayList(C)
-      - LinkedList(C)
-      - Vector(C)
-   - Set(I)
-      - HashSet(C)
-         - LinkedHashSet(C)
-      - TreeSet(C)
-3. Elements in the List are ordered, not unique, indexable;
-4. Elements in the Set are unordered, unique, not indexable;
+   - List(I): Elements in the List are ordered, not unique, indexable;
+     - ArrayList(C)
+     - LinkedList(C)
+     - Vector(C)
+   - Set(I): Elements in the Set are unordered, unique, not indexable;
+     - HashSet(C)
+     - LinkedHashSet(C)
+     - TreeSet(C)
+3. Map(I):
+   - HashMap(C)
+     - LinkedHashMap(C)
+   - TreeMap(C)
 
 
 ---
@@ -185,9 +191,9 @@ Implemented by hashtable.
    - Create a `length=16`, `loadFactor=0.75` array named `table`
    - when adding a value, compute the index of where it should go: `int index = (length - 1) & hashCode`
    - if `table[index]` is null, insert; 
-   - if `table[index]` is not null, call `equals()` 
-     - if `equals()` end the insertion
-     - if `!equals()`, put new element in the array, old element linked after the element
+   - if `table[index]` is not null, compare hashCode && `equals()` 
+     - if same, end the insertion
+     - if !same, put new element in the array, old element linked after the element
    - if `table` stores `16*0.75=12` elements, it expands the length by two
 2. After JDK8: Array + LinkedList + RedBlackTree
    - same step as above but if `!equals()`, linked new element after the old one
@@ -211,16 +217,47 @@ implemented by Red-Black Tree, so it is sorted
 - also can create a comparator when creating the TreeSet
 
 ---
-## HashMap
-1. Declare
-    - `HashMap<type, type> myHashMap = new HashMap<type, type>();`
-2. Methods
-    - `put(key, value)`
-    - `get(key)`
-    - `remove(key)`
-    - `clear()`
-    - `size()`
-    - `keySet() //All the keys`
-    - `values() //All the values`
-    - `containsKey(key)`
+## Map
+### Common Methods
+- `V put(K key, V value)`
+- `V get(Object key)`
+- `V remove(Object key)`
+- `void clear()`
+- `boolean containsKey(Object key)`
+- `boolean containsValue(Object value)`
+- `boolean isEmpty()`
+- `int size()`
+### Traversal Methods
+1. use **keys**: `map.keySet()` get set of keys, and use keys traversal each value
+2. use **entries**: `entrySet()` get all entries, and then use `getValue()` and `getKey()`
+3. use **lambda**: `forEach(BiConsumer<? super K, ? super V? action)`
 
+---
+## HashMap
+Implemented by HashTable. All keys have no order, are unique and are not indexed.
+### Underlying Principle
+- Same as hashSet
+- But this time, create an entry object that records key and value, and store the entry in the array
+- the computation of index doesn't involve value of the entry
+- when `equal()` two objects with same index, only compare their keys
+
+---
+## LinkedHashMap
+All keys are ordered
+### Underlying Principle
+- same as linkedHashSet
+
+---
+## TreeMap
+All keys are sorted
+### Underlying Principle 
+- same as TreeSet
+
+---
+## HashTable
+
+---
+## Properties
+
+---
+## Collections

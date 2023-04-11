@@ -285,3 +285,7 @@ In Java, regular expressions are implemented using the java.util.regex package.
 - `()` - Groups expressions together.
 #### Comparator
 `return o1 - o2`, `o1` is current object, if `o1 - o2 < 0`, means that `o1` is smaller and should be placed at front;
+#### Changeable parameter
+- `int getSum(int...args)`: use `type...argName` to define changeable number of input
+- e.g. `getSum(1,2); getSum(1,2,3,4,5)`
+- inside the `int...args`, java automatically turn int numbers into int[], so treat `args` as the name of the array.
