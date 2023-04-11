@@ -5,7 +5,7 @@ import myjava.practices.basic.Student;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class sortObject {
+public class SortObject {
     public static void main(String[] args) {
         Student s1 = new Student("Jack", 29);
         Student s2 = new Student("Jack", 18);
