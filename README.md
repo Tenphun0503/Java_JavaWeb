@@ -16,12 +16,12 @@
         <td>Variables and data types, control structures, methods and functions, arrays and collections</td>
     </tr>
     <tr>
-        <td><a href="topics/2_CollectionsMaps.md">Collections and Maps</a></td>
-        <td>Collections and Maps</td>
+        <td><a href="topics/2_ObjectOrientedProgramming.md">Object-Oriented Programming</a></td>
+        <td>Classes and objects, inheritance, polymorphism, encapsulation, abstraction</td>
     </tr>
     <tr>
-        <td><a href="topics/3_ObjectOrientedProgramming.md">Object-Oriented Programming</a></td>
-        <td>Classes and objects, inheritance, polymorphism, encapsulation, abstraction</td>
+        <td><a href="topics/3_CollectionsMaps.md">Collections and Maps</a></td>
+        <td>Collections and Maps</td>
     </tr>
     <tr>
         <td><a href="topics/4_DesignPattern.md">Design Pattern</a></td>
@@ -32,23 +32,19 @@
         <td>Object, Math, System, BigDecimal</td>
     </tr>
     <tr>
-        <td><a href="#exceptions">Exception Handling</a></td>
-        <td>Handling exceptions, try-catch-finally blocks</td>
-    </tr>
-    <tr>
-        <td><a href="topics/5_InputAndOutput.md">Input and Output</a></td>
+        <td><a href="topics/6_InputAndOutput.md">Input and Output</a></td>
         <td>Reading and writing files, working with streams</td>
     </tr>
     <tr>
-        <td><a href="#threads">Multithreading and Concurrency</a></td>
+        <td><a href="topics/7_Multithreading.md">Multithreading and Concurrency</a></td>
         <td>Creating and managing threads, synchronization and locks</td>
     </tr>
     <tr>
-        <td><a href="topics/6_JavaWeb.md">Java Web</a></td>
+        <td><a href="topics/8_JavaWeb.md">Java Web</a></td>
         <td>Quick look of database, the front end. Web-related knowledge</td>
     </tr>
     <tr>
-        <td><a href="topics/7_ToolsAndFrameworks.md">Tools and Frameworks</a></td>
+        <td><a href="topics/9_ToolsAndFrameworks.md">Tools and Frameworks</a></td>
         <td>Build tools like Maven or Gradle, unit testing frameworks like JUnit or TestNG, web frameworks like Spring or Struts</td>
     </tr>
 </table>
