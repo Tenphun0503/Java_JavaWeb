@@ -1,7 +1,7 @@
 # Java Technical Interview Note
 ## 1. Usage of Collections in coding:
 ### List, Set, Map (minimum ArrayList, LinkedList, HashMap(hashCode))
-1. Collection(I):
+1. [Collection](../topics/3_CollectionsMaps.md)(I):
     - List(I): Elements in the List are ordered, not unique, indexable;
         - ArrayList(C): implemented by array. Default length 10, expand by 1.5
         - LinkedList(C): implemented by linkedList
@@ -29,16 +29,14 @@
 ## 3. Basic algorithm (leetcode easy level)
 
 ## 4. Advanced concept in java: OOP, SOLID, MVC, design patterns, multithreading
-1. OOP: encapsulation, abstraction, inheritance, polymorphism.
+1. [OOP](../topics/2_ObjectOrientedProgramming.md): encapsulation, abstraction, inheritance, polymorphism.
 2. SOLID:
 3. MVC: 
    - Model:data and business logic
    - View: presenting the data from the Model to the use 
    - Controller: Intermediary between Model and View.
-4. Design Patterns
-   - d
-5. Multithreading
-   - d
+4. [Design Patterns](../topics/4_DesignPattern.md)
+5. [Multithreading](../topics/7_Multithreading.md)
 
 ## 5. Basic network (HTTP, TCP)
 
