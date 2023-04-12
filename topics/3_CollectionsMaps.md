@@ -283,3 +283,109 @@ the `java.util.Collections` class provides a set of utility methods for working 
 - `public static <T> int fill(List<T> list, T obj)`
 - `public static <T> void max/min(Collection<T> coll)`
 - `public static <T> swap(List<?> list, int i, int j)`
+
+---
+## Stream
+### Features
+stream will be closed after one operation, so better to use chain programming. (don't have to record intermediate value)
+### Common Methods
+- `default Stream<E> stream()` e.g. `list.stream()`
+- `public static<T> Stream<T> stream(T[] array)`  : for array
+- `public static<T> Stream<T> of (T... values)`
+- `Stream<T> filter(Predicate<? super T> predicate)`
+- `Stream<T> limit(long maxSize)`
+- `Stream<T> skip(long n)`
+- `Stream<T> distinct()`
+- `static <T> Stream <T> concat(Stream a, Stream b)`
+- `Stream<R> map(Function<T, R> mapper`
+- `void forEach(Consumer action`
+- `long count()`
+- `toArray()`: put in array
+- `collect(Collector collector)`: put in collection
+  - `Collector.toList()`
+  - `Collector.toSet()`
+  - `Collector.toMap`
+```java
+class Example{
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        Collections.addAll(list, "Jack", "Jenny", "Rose", "John", "Lisa", "Lisa");
+        
+        list.stream().foreach(s-> System.out.println(s));                   // create stream and print each element 
+        list.stream().filter(s->s.startsWith("J"));                         // filter names start with J
+        list.stream().filter(s->s.startsWith("J")).filter(s->s.length==4);  // filter names start with J then filter length of 4
+        
+        list.stream().limit(3);         // get first 3 elements
+        list.stream().skip(3);          // skip first 3 elements
+        
+        list.stream().distinct();       // element deduplication, based on hashCode() and equals(), so have to override
+        
+        Stream.concat(list.stream(), list.stream());    // concat two streams
+    }
+}
+```
+- `map()` and `toArray()` 
+```java
+class Example{
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        Collections.addAll(list, "Jack-15", "Jenny-18", "Rose-16", "John-19", "Lisa-20");
+        
+        // get age of each person
+        list.stream().map(new Function<String, Integer>() {
+           @Override
+           public Integer apply(String s){
+               return s.split("-")[1];
+           } 
+        });
+        
+        // with lambda
+        list.stream().map(s -> s.split("-")[1]).forEach(s-> System.out.println(s));
+        
+        // toArray()
+        // IntFunction generic: the type wanted to turn to
+        // apply() para: size of the array
+        String[] ages = list.stream().map(s -> s.split("-")[1]).toArray(new IntFuction<String[]>() {
+            @Override
+            public String[] apply(int value){
+                return new String[value];
+            }
+        });
+        // with lambda
+        String[] list = list.stream().toArray(v-> new String[v]);
+    } 
+}
+```
+- Collect to Map (key should be unique)
+```java
+class Example {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        Collections.addAll(list, "Jack-15", "Jenny-18", "Rose-16", "John-19", "Lisa-20");
+        
+        // toMap() takes two paras
+        //      1. key generation definition
+        //      2. value generation definition
+        // Function generics:
+        //      1. type of element in the stream
+        //      2. type of key, value in the map
+        Map<String, Integer> map = list.stream().collect(Collectors.toMap(new Function<String, String>() {
+            @Override
+            public String apply(String s) {
+                return s.split("-")[0];
+            }
+        }, new Function<String, Integer>() {
+            @Override
+            public Integer apply(String s) {
+                return Integer.parseInt(s.split("-")[1]);
+            }
+        }));
+        
+        // with lambda
+        Map<String, Integer> map = list.stream().collect(Collectors.toMap(
+                s -> s.split("-")[0],
+                s -> Integer.parseInt(s.split("-")[1])
+        ));
+    }
+}
+```
