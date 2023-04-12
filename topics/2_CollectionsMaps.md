@@ -11,7 +11,7 @@
 ### _[8. LinkedHashSet](#LinkedHashSet)_
 ### _[9. TreeSet](#TreeSet)_
 ### _[10. Map](#Map)_
-### _[11. HashMao](#HashMap)_
+### _[11. HashMap](#HashMap)_
 ### _[12. LinkedHashMap](#LinkedHashMap)_
 ### _[13. TreeMap](#TreeMap)_
 ### _[14. Collections](#Collections)_
@@ -71,6 +71,9 @@
 3. for-each
 4. Lambda
 5. normal for loop (since List is indexed)
+### Unmodifiable list
+- unmodifiable list can not be added, removed, etc.
+- `static <E> List<E> of(E...e)`
 
 ---
 ## ArrayList
@@ -175,6 +178,9 @@ Has no order, no duplicate, no index
 1. HashSet: no order, no duplicate, no index
 2. LinkedHashSet: **ordered**, no duplicate, no index
 3. TreeSet: **sortable**, no duplicate, no index
+### Unmodifiable set
+- unmodifiable set can not be added, removed, etc.
+- `static <E> Set<E> of(E...e)`
 
 ---
 ## HashSet
@@ -194,7 +200,7 @@ Implemented by hashtable.
    - if `table[index]` is not null, compare hashCode && `equals()` 
      - if same, end the insertion
      - if !same, put new element in the array, old element linked after the element
-   - if `table` stores `16*0.75=12` elements, it expands the length by two
+   - if `table` stores `16*0.75=12` elements, it expands the length by double of original size
 2. After JDK8: Array + LinkedList + RedBlackTree
    - same step as above but if `!equals()`, linked new element after the old one
    - if `linkedList.size() > 8` and `length > 64`, linkedList will turn to RedBlackTree
@@ -231,6 +237,12 @@ implemented by Red-Black Tree, so it is sorted
 1. use **keys**: `map.keySet()` get set of keys, and use keys traversal each value
 2. use **entries**: `entrySet()` get all entries, and then use `getValue()` and `getKey()`
 3. use **lambda**: `forEach(BiConsumer<? super K, ? super V? action)`
+### Unmodifiable map
+- unmodifiable map can not be added, removed, etc.
+- `static <K, V> Map<K, V> of(K k1, V v1)`
+- `of()` of Map can take max up to 20 parameters, which are 10 entries. 
+- But can use `ofEntries()` to input more than 10 entries.
+- From JDK10, we can use `copyOf()` to create an immutableMap from a map
 
 ---
 ## HashMap
