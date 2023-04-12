@@ -1,4 +1,4 @@
-package myjava.practices.basic;
+package myjava.practices.basic.practice;
 
 public class ArraySumNoSeven {
     public static void main(String[] args) {

@@ -1,4 +1,6 @@
-package myjava.practices.basic;
+package myjava.practices.basic.practice;
+
+import myjava.practices.basic.domain.Student;
 
 import java.util.*;
 

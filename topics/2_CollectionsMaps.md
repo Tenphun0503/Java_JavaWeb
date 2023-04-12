@@ -261,3 +261,13 @@ All keys are sorted
 
 ---
 ## Collections
+the `java.util.Collections` class provides a set of utility methods for working with collections.
+### Common Methods
+- `public static <T> boolean addAll(Collection<T> c, T... elements)` `elements` is a length-variable parameter
+- `public static void shuffle(List<?> list)`: shuffles the elements in a List.
+- `public static <T> void sort(List<T> list)`
+- `public static <T> int binarySearch(List<T> list, T key)`
+- `public static <T> void copy(List<T> dest, List<T> src)`
+- `public static <T> int fill(List<T> list, T obj)`
+- `public static <T> void max/min(Collection<T> coll)`
+- `public static <T> swap(List<?> list, int i, int j)`

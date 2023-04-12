@@ -1,9 +1,18 @@
-package myjava.practices.basic;
+package myjava.practices.basic.domain;
 
 public class Student {
     private String name;
     private int age;
 
+    private char gender;
+
+    public char getGender() {
+        return gender;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
 
     public Student() {
     }
@@ -11,6 +20,12 @@ public class Student {
     public Student(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    public Student(String name, int age, char gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
     }
 
     @Override

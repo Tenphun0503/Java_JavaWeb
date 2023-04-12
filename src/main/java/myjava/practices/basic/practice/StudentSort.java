@@ -1,11 +1,11 @@
-package myjava.practices.practice;
+package myjava.practices.basic.practice;
 
-import myjava.practices.basic.Student;
+import myjava.practices.basic.domain.Student;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class SortObject {
+public class StudentSort {
     public static void main(String[] args) {
         Student s1 = new Student("Jack", 29);
         Student s2 = new Student("Jack", 18);
