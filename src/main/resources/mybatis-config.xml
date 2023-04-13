@@ -4,7 +4,7 @@
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="myjava.practices.mybatis"/>
+        <package name="myjava.web.mybatis"/>
     </typeAliases>
 
     <environments default="development">
@@ -25,6 +25,6 @@
         <!--<mapper resource="myjava/practices/mybatis/mapper/brandMapper.xml"/>-->
         
         <!--Since we put all mapper files into mapper package, we can use package-scanner-->
-        <package name="myjava.practices.mybatis.mapper"/>
+        <package name="myjava.web.mybatis.mapper"/>
     </mappers>
 </configuration>
