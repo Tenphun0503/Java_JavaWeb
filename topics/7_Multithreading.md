@@ -1,10 +1,10 @@
 # Multithreading
 
 ---
-### _[Intro](#Intro)_
-### _[Implementation](#Implementation)_
-### _[CommonMethods](#CommonMethods)_
-### _[Thread Safety](#ThreadSafety)_
+### _[1. Intro](#Intro)_
+### _[2. Implementation](#Implementation)_
+### _[3. CommonMethods](#CommonMethods)_
+### _[4. Thread Safety](#ThreadSafety)_
 
 
 ---
