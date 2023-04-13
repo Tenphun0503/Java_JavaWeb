@@ -93,7 +93,14 @@
       - BufferedOutputSteam
   - Character streams
     - Reader(I)
+      - FileReader
+      - have a buffer size as 8192, first read as much as into buffer
     - Writer(I)
+      - FileWriter  
+        - have a buffer size as 8192, first write into buffer, and when
+          - buffer is full, write into file
+          - use `flush()`, write into file
+          - use `close()`, write into file and cut the connection
 ```java
 class Example {
     public static void main(String[] args) {
@@ -136,7 +143,7 @@ class Example {
          * */
         FileInputStream fis = null;
         try {
-            fis = new FileInputStream(file);
+            fis = new FileInputStream(file);        // if file doesn't exist, return null
             int b;
             while ((b = fis.read()) != -1) {
                 System.out.println(b);
@@ -144,7 +151,7 @@ class Example {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if(fis!=null){
+            if(fis!=null){      
               try {
                 fis.close();
               } catch (IOEXception e) {
@@ -155,3 +162,10 @@ class Example {
     }
 }
 ```
+- Above is too complex, jdk7 introduced `autoCloseable` in some specific condition 
+  - create fis in try();
+  - remove all about close();
+- In JDK9, this is improved
+  - create fis above try() and throws exception
+  - pass fis as para of try();
+  - remove all about close();
