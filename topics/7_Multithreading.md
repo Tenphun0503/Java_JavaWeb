@@ -129,3 +129,25 @@ class Example{
 - `static Lock lock = new ReenterantLock();`
 - `void lock()`
 - `void unlock()`: use `try/catch` to include all code and put `unlock()` in the `finally{}`
+
+---
+## Producer and Consumer
+### [Cook](../src/main/java/myjava/basic/multithreading/Cook.java) and [Foodie](../src/main/java/myjava/basic/multithreading/Foodie.java)
+### blockingQueue
+- Collection - Queue - BlockingQueue - ArrayBlockingQueue/LinkedBlockingQueue
+- ArrayBlockingQueue: bounded
+- LinkedBlockingQueue: unbounded  
+
+---
+## Thread pool
+### Use Executors:
+- `public static ExecutorService newCachedThreadPool()` Create a no limit pool
+- `public static ExecutorService newFixedThreadPool(int nThreads)` 
+### Self Defined (7 keys)
+- Core Thread number
+- Max Thread number
+- free thread maximum lifetime
+- free thread maximum time unit
+- task queue
+- thread factory
+- task 
