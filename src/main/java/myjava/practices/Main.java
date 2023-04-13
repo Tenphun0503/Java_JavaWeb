@@ -14,10 +14,5 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>();
-        Collections.addAll(list, "Jack-15", "Jenny-18", "Rose-16", "John-19", "Lisa-20");
-
-        Map<String, String> map = list.stream().collect(Collectors.toMap(
-                s -> s.split("-")[0], s -> s.split("-")[1]));
     }
 }

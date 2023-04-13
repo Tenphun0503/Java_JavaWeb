@@ -68,6 +68,26 @@ class ClassName{
 > For future development, we only store the data in Java Bean Objects.
 > The processing of data(methods) is handed over to other classes to complete
 
+### Method Reference
+Method reference is a feature introduced in Java 8 that allows you to reference an existing method or constructor in your code, 
+rather than writing a lambda expression that defines a new method or constructor.
+- reference should be functional interface
+- referenced method should be existed
+- referenced method should have same parameters and return as reference
+- referenced method should meet requirement of the circumstance.
+#### Different ways
+- `ClassName::staticMethodName` reference static method
+- Reference member method
+  - `ObjectName::method`
+  - `this::method`
+  - `super::method`
+- `ClassName::new` Reference constructor
+- `ClassName::method` Reference member method through className
+  - can't reference member method of all class
+  - if the first para of the abstract method is Type A, then can only reference methods in A
+- `Type[]::new`
+
+
 ---
 ## Encapsulation
 Encapsulation is a key concept in OOP that allows bundling data and methods within a class and controlling access to them from outside the class.

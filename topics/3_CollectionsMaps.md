@@ -352,7 +352,9 @@ class Example{
             }
         });
         // with lambda
-        String[] list = list.stream().toArray(v-> new String[v]);
+        String[] list1 = list.stream().toArray(v-> new String[v]);
+        // with method reference
+        String[] list2 = list.stream().toArray(String[]::new);
     } 
 }
 ```

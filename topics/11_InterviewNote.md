@@ -36,7 +36,7 @@
    - View: presenting the data from the Model to the use 
    - Controller: Intermediary between Model and View.
 4. [Design Patterns](../topics/4_DesignPattern.md)
-5. [Multithreading](../topics/7_Multithreading.md)
+5. [Multithreading](../topics/8_Multithreading.md)
 
 ## 5. Basic network (HTTP, TCP)
 
