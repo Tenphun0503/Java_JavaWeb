@@ -144,10 +144,16 @@ class Example{
 - `public static ExecutorService newCachedThreadPool()` Create a no limit pool
 - `public static ExecutorService newFixedThreadPool(int nThreads)` 
 ### Self Defined (7 keys)
-- Core Thread number
-- Max Thread number
-- free thread maximum lifetime
-- free thread maximum time unit
-- task queue
-- thread factory
-- task 
+`ThreadPoolExecutor(3, 6, 60, TimeUnit.SECONDS, new ArrayBlockingQueue<>(3), Executors.defaultThreadtFactory(), new ThreadPoolExecutor.AbortPolicy())`
+- `3` Core Thread number
+- `6 `Max Thread number
+- `60` free thread maximum lifetime
+- `TimeUnit.SECONDS` free thread maximum time unit
+- `new ArrayBlockingQueue<>(3)` task queue
+- `Executors.defaultThreadtFactory()` thread factory
+- `new ThreadPoolExecutor.AbortPolicy()` task rejection handler
+### Prefer pool size
+- CPU computation: maximum Parallelism number + 1
+- I/O computation: maximumParallelismNumber * ExpectedCPUUsage*(CPUComputationTime+WaitingTime)/CPUComputationTime
+  - 8*100%*(100%/50%)=16 (waiting time like I/O operation time)
+  - test cpu time, we can use tools like thread dump
