@@ -1,14 +1,20 @@
 package myjava;
 
-public class Main {
-    public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5};
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
-        try {
-            System.out.println(arr[10]);
-        } catch (Exception e) {
-            e.printStackTrace();
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream("D:\\file.JPG");
+        FileOutputStream fos = new FileOutputStream("D:\\copy.JPG");
+
+        int b;
+        while ((b=fis.read())!= -1){
+            fos.write(b);
         }
-        System.out.println("SS");
+        fis.close();
+        fos.close();
     }
 }

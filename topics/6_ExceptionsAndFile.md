@@ -1,8 +1,9 @@
 # Exceptions And Files
 
 ---
-### _[Exceptions](#Exceptions)_
-### _[File](#File)_
+### _[1. Exceptions](#Exceptions)_
+### _[2. File](#File)_
+### _[3. IO](#IO)_
 
 ---
 ## Exceptions
@@ -46,4 +47,111 @@
 
 ---
 ## File
-### 
+### Constructor
+- `public File(String path)`
+- `public File(String parent, String child)`
+- `public File(File parent, String child)`
+### Common methods
+- if and getting
+  - `public boolean isDirectory()`
+  - `public boolean isFile()`
+  - `public boolean exists()`
+  - `public long length()`: return the size of the file (byte)
+  - `public String getAbsolutePath()`
+  - `public String getPath()`
+  - `public String getName()`
+  - `public long lastModified()`
+- Create and delete
+  - `public boolean createNewFile()`: if file exists, return false; if dir doesn't exist, throw exception
+  - `public boolean mkdir()`
+  - `public boolean mkdirs()`: multiple level directions
+  - `public boolean delete`
+- traversal
+  - `public static File[] listRoots()`
+  - `public String[] list()`
+  - `public String[] list(FilenameFilter filter)`
+  - `public File[] listFiles()`: list files
+  - `public File[] listFiles(FileFilter filter)`
+  - `public File[] listFiles(FilenameFilter filter)`
+
+---
+## IO
+- By direction
+  - input
+  - output
+- By streams
+  - Byte streams
+    - InputStream(I)
+      - FileInputStream
+        - `int read()`
+      - BufferedInputStream
+    - OutputStream(I)
+      - FileOutputStream
+        - `void write(int b)`
+        - `void write(byte[] b)`
+        - `void write(byte[] b, int off, int len)`
+      - BufferedOutputSteam
+  - Character streams
+    - Reader(I)
+    - Writer(I)
+```java
+class Example {
+    public static void main(String[] args) {
+        FileInputStream fis = new FileInputStream("path\\file.txt");
+        FileOutputStream fos = new FileOutputStream("path\\copy.txt");
+
+        byte[] bytes = new byte[1024]; // read 1k each time, or we can read one by one
+        while ((b = fis.read(bytes)) != -1) {
+            fos.write(b);
+        }
+        fis.close();
+        fos.close();
+    }
+}
+```
+```java
+class Example{
+  public static void main(String[] args) {
+    FileInputStream fis = new FileInputStrea(file);
+    bytes[] bytes = new byte[2];            // fis.read(bytes) return the length of read bytes
+    while (fis.read(bytes) != -1){          // if we have abcde in file
+      System.out.println(new Stirng(bytes));// 1st, we have ab in bytes
+                                            // 2ed, we have cd in bytes
+                                            // 3rd, we have ed in bytes
+                                            // since we have only e left, so we replace only c of the cd.
+      // so we can use new String(bytes, 0, len) to print the right content
+    }
+  }
+}
+```
+```java
+class Example {
+    public static void main(String[] args) {
+        /*
+         * we have to close even there is exception,
+         * so we put close() in the finally
+         * we need fis declared outside of try block,
+         * but we need to catch its exception inside try,
+         * and also we have to catch close()
+         * */
+        FileInputStream fis = null;
+        try {
+            fis = new FileInputStream(file);
+            int b;
+            while ((b = fis.read()) != -1) {
+                System.out.println(b);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(fis!=null){
+              try {
+                fis.close();
+              } catch (IOEXception e) {
+                e.printStackTrace();
+              }
+            }
+        }
+    }
+}
+```
