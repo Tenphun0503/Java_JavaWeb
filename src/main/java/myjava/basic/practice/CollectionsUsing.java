@@ -46,7 +46,7 @@ public class CollectionsUsing {
         hashSet.add(3);
         hashSet.add(2);
         hashSet.add(1);
-        System.out.print("HashSet " + hashSet);
+        System.out.println("HashSet " + hashSet);
         /*
             LinkedHashSet is implement by array, linkedList, red-blackTree
             But it uses one double-linked-list to record adding order,
@@ -120,9 +120,9 @@ public class CollectionsUsing {
     }
     public static void main(String[] args) {
         // collection sample
-        // collection();
+        collection();
         // map sample
-        // map();
+        map();
         
         // Sorting a list/array
         // for example, we have 5 teachers
