@@ -2,7 +2,7 @@ package myjava.basic.practice;
 
 import java.util.*;
 
-public class CollectionsUsing {
+public class CollectionsAndMap {
     public static void collection(){
         /*
             Collection is a single column collection
