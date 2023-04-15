@@ -46,5 +46,34 @@ SOLID is a set of design principles that are used to make software more maintain
 ### [Multithreading](../topics/7_Multithreading.md)
 
 ## 5. Basic network (HTTP, TCP)
+HTTP requests and responses are typically sent over TCP connections.
+### HTTP
+HTTP (Hypertext Transfer Protocol) is a protocol used for communication between web servers and clients. 
+When a web browser requests a web page from a server, it sends an HTTP request to the server. 
+The server then responds with an HTTP response, which includes the requested page or other information.
+### TCP
+TCP (Transmission Control Protocol) is a protocol that provides reliable, ordered, and error-checked delivery of data between applications running on hosts communicating over an IP network. 
+TCP ensures that data is delivered to its destination without errors and in the correct order. 
+It also includes mechanisms for congestion control, which helps to prevent network congestion and ensure that network resources are used efficiently.
 
 ## 6. Basic DB (SQL, joins, index)
+A database is a collection of organized data that can be easily accessed, managed, and updated.
+In database management, the most common operations performed on data are Create, Read (Query), Update, and Delete, which are commonly abbreviated as CRUD.
+### SQL
+SQL (Structured Query Language) is a programming language used to manage relational databases.
+- create, modify, and query databases
+- creating and modifying tables
+- inserting, updating, deleting and retrieving data
+### Joins
+Joins are used in SQL to combine data from two or more tables based on a related column.
+There are different types of joins in SQL: 
+- inner join:  Inner join returns only the rows that match between the two tables based on a specified condition
+- left join:  left join returns all the rows from the left table and the matching rows from the right table.
+- right join: Right join returns all the rows from the right table and the matching rows from the left table
+- full outer join: Full outer join returns all the rows from both tables and matches the rows based on a specified condition.
+### Index
+Indexes are used to speed up the querying process in a database.
+An index is a data structure that stores a copy of a subset of the data in a table, organized in a way that allows for faster searches.
+When a query is executed, the database can use the index to quickly locate the relevant data, rather than searching through the entire table.
+This can greatly improve the performance of queries, especially when dealing with large datasets. 
+However, indexes can also slow down data updates and inserts, as the database needs to update the index as well as the table. 
