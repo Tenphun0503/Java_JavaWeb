@@ -3,8 +3,23 @@ A design pattern is a reusable solution to a recurring problem that arises durin
 Design patterns provide a structured and proven approach to solving common software design problems by defining a set of best practices that can be applied to different situations.
 
 ---
-### _[1. Adapter pattern](#Adapter)_
-### _[2. Template pattern](#Template)_
+### _[1. Singleton pattern](#Singleton)_
+### _[2. Factory pattern](#Factory)_
+### _[3. Adapter pattern](#Adapter)_
+### _[4. Template pattern](#Template)_
+
+
+---
+## Singleton
+The Singleton pattern ensures a class has only one instance and provides a global point of access to that instance. 
+It is commonly used in scenarios where only a single instance of a class is required to control actions or coordinate activities throughout a system.
+- Define a `private` `static` object;
+- `private` constructor;
+- Define a `static` `synchronized` `getInstace()` method;
+- Override `clone()` method (implement `Coneable`)
+
+---
+## Factory
 
 ---
 ## Adapter
