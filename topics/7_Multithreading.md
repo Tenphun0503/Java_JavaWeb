@@ -75,7 +75,7 @@ class Example{
 ```
 
 ### Callable and Future
-- previous `run()` return nothing, but this way returns
+- In this way, we can get the result executed
 - Define a class implements `Callable`, and override `call()`
 ```java
 class MyCallable implements Callable<Integer>{
@@ -100,6 +100,7 @@ class Example{
     
 }
 ```
+- Also, we can use ExecutorService to manage and schedule threads.
 
 ---
 ## CommonMethods
