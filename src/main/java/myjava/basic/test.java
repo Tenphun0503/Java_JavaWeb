@@ -64,6 +64,7 @@ public class test {
 
             return i;
         });
+
         System.out.println(list1);
     }
 }
