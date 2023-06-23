@@ -5,27 +5,52 @@ package myjava.basic.multithreading.creation2;
  * 编写一个程序，创建两个线程，分别输出数字1到10和字母A到J，要求数字和字母交替输出。
  */
 public class MyThread {
-    private static class ThreadOne extends Thread {
-        @Override
-        public void run(){
+    boolean isNum = true;
+    final Object lock = new Object();
+
+    public void printNumber() throws InterruptedException {
+        synchronized (lock){
             for (int i = 1; i <= 10; i++) {
+                while(!isNum){
+                    lock.wait();
+                }
                 System.out.println(i);
+                isNum = false;
+
+                lock.notify();
             }
         }
     }
-
-    private static class ThreadTwo extends Thread {
-        @Override
-        public void run(){
+    public void printLetter() throws InterruptedException {
+        synchronized (lock){
             for (int i = 'A'; i < 'K'; i ++){
+                while(isNum){
+                    lock.wait();
+                }
                 System.out.println((char) i);
+                isNum = true;
+
+                lock.notify();
             }
         }
     }
 
     public static void main(String[] args) {
-        ThreadOne t1 = new ThreadOne();
-        ThreadTwo t2 = new ThreadTwo();
+        MyThread t = new MyThread();
+        Thread t1 = new Thread(()-> {
+            try {
+                t.printLetter();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        Thread t2 = new Thread(()-> {
+            try {
+                t.printNumber();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
         t1.start();
         t2.start();
     }
